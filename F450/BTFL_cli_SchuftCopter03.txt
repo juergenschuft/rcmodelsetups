@@ -3,8 +3,8 @@
 # diff
 
 # version
-# Betaflight / STM32F405 (S405) 4.1.5 Mar 16 2020 / 05:19:58 (d4e74e39c) MSP API: 1.42
-# manufacturer_id: MTKS   board_name: MATEKF405CTR   custom defaults: YES
+# Betaflight / STM32F405 (S405) 4.2.2 Aug 16 2020 / 01:46:41 (e833ac612) MSP API: 1.43
+# config: manufacturer_id: MTKS, board_name: MATEKF405CTR, version: f173f9bc, date: 2019-10-02T14:43:13Z
 
 # start the command batch
 batch start
@@ -40,19 +40,21 @@ vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860    0
 vtxtable band 5 RACEBAND R FACTORY    0    0 5732 5769 5806 5843    0    0
 vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
 vtxtable powerlevels 1
-vtxtable powerlabels 25
+vtxtable powerlabels 200
 
 # master
-set gyro_sync_denom = 4
-set acc_calibration = 10,72,-174
+set acc_calibration = 10,72,-174,1
+set rc_smoothing_derivative_type = BIQUAD
 set serialrx_provider = SRXL
 set current_meter = ESC
-set pid_process_denom = 1
+set gps_sbas_mode = AUTO
 set osd_warn_link_quality = ON
 set osd_vbat_pos = 2081
 set osd_flymode_pos = 2103
 set osd_ah_sbar_pos = 2254
 set osd_ah_pos = 2126
+set osd_home_dir_pos = 2369
+set osd_home_dist_pos = 2433
 set osd_compass_bar_pos = 2282
 set osd_altitude_pos = 2465
 set osd_core_temp_pos = 2113
@@ -60,6 +62,9 @@ set osd_rate_profile_name_pos = 438
 set osd_pid_profile_name_pos = 2135
 set osd_stat_min_link_quality = ON
 set debug_mode = FF_INTERPOLATED
+set vtx_power = 1
+set vtx_low_power_disarm = ON
+set vtx_freq = 5780
 set gyro_1_align_yaw = 2700
 set name = SchuftCopter03
 
@@ -82,6 +87,9 @@ set d_min_roll = 0
 set d_min_pitch = 0
 
 rateprofile 0
+
+# rateprofile 0
+set tpa_breakpoint = 1250
 
 # end the command batch
 batch end
