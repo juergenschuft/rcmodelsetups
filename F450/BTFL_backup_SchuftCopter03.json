@@ -2604,8 +2604,8 @@
 	},
 	"FAILSAFE_CONFIG": {
 		"failsafe_delay": 4,
-		"failsafe_off_delay": 100,
-		"failsafe_throttle": 1000,
+		"failsafe_off_delay": 200,
+		"failsafe_throttle": 1200,
 		"failsafe_switch_mode": 0,
 		"failsafe_throttle_low_delay": 100,
 		"failsafe_procedure": 0
@@ -2875,8 +2875,7 @@
 				}
 			],
 			"_featureMask": 943981640,
-			"_analyticsChanges": {},
-			"_featureChanges": {}
+			"_analyticsChanges": {}
 		}
 	},
 	"MOTOR_CONFIG": {
@@ -3015,7 +3014,7 @@
 					"visible": true
 				}
 			],
-			"_beeperMask": 0
+			"_beeperMask": 196608
 		},
 		"dshotBeaconTone": 1,
 		"dshotBeaconConditions": {
