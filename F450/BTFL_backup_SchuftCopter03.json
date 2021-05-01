@@ -2579,7 +2579,7 @@
 		"gyro_2_align": 1
 	},
 	"RX_CONFIG": {
-		"serialrx_provider": 10,
+		"serialrx_provider": 13,
 		"stick_max": 1900,
 		"stick_center": 1500,
 		"stick_min": 1050,
@@ -2604,11 +2604,11 @@
 	},
 	"FAILSAFE_CONFIG": {
 		"failsafe_delay": 4,
-		"failsafe_off_delay": 10,
+		"failsafe_off_delay": 100,
 		"failsafe_throttle": 1000,
 		"failsafe_switch_mode": 0,
 		"failsafe_throttle_low_delay": 100,
-		"failsafe_procedure": 1
+		"failsafe_procedure": 0
 	},
 	"RXFAIL_CONFIG": [
 		{
@@ -2658,10 +2658,90 @@
 		{
 			"mode": 1,
 			"value": 1500
+		},
+		{
+			"mode": 1,
+			"value": 1500
+		},
+		{
+			"mode": 1,
+			"value": 1500
+		},
+		{
+			"mode": 1,
+			"value": 1500
+		},
+		{
+			"mode": 1,
+			"value": 1500
+		},
+		{
+			"mode": 1,
+			"value": 1500
+		},
+		{
+			"mode": 1,
+			"value": 1500
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
 		}
 	],
 	"RSSI_CONFIG": {
-		"channel": 0
+		"channel": 8
 	},
 	"FEATURE_CONFIG": {
 		"features": {
@@ -2795,7 +2875,8 @@
 				}
 			],
 			"_featureMask": 943981640,
-			"_analyticsChanges": {}
+			"_analyticsChanges": {},
+			"_featureChanges": {}
 		}
 	},
 	"MOTOR_CONFIG": {

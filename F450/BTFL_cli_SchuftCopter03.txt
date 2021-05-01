@@ -3,7 +3,7 @@
 # diff
 
 # version
-# Betaflight / STM32F405 (S405) 4.2.2 Aug 16 2020 / 01:46:41 (e833ac612) MSP API: 1.43
+# Betaflight / STM32F405 (S405) 4.2.9 Apr 27 2021 / 19:33:01 (e097f4ab7) MSP API: 1.43
 # config: manufacturer_id: MTKS, board_name: MATEKF405CTR, version: f173f9bc, date: 2019-10-02T14:43:13Z
 
 # start the command batch
@@ -44,12 +44,18 @@ vtxtable powerlabels 200
 
 # master
 set acc_calibration = 10,72,-174,1
+set rssi_channel = 8
 set rc_smoothing_derivative_type = BIQUAD
-set serialrx_provider = SRXL
+set serialrx_provider = SRXL2
+set failsafe_off_delay = 100
+set failsafe_procedure = AUTO-LAND
+set bat_capacity = 2200
 set current_meter = ESC
 set gps_sbas_mode = AUTO
 set osd_warn_link_quality = ON
 set osd_vbat_pos = 2081
+set osd_rssi_pos = 2282
+set osd_rssi_dbm_pos = 2474
 set osd_flymode_pos = 2103
 set osd_ah_sbar_pos = 2254
 set osd_ah_pos = 2126
