@@ -2741,7 +2741,7 @@
 		}
 	],
 	"RSSI_CONFIG": {
-		"channel": 8
+		"channel": 0
 	},
 	"FEATURE_CONFIG": {
 		"features": {
