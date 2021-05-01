@@ -17,6 +17,10 @@ manufacturer_id MTKS
 # feature
 feature ESC_SENSOR
 
+# beeper
+beeper -SYSTEM_INIT
+beeper -ON_USB
+
 # map
 map TAER1234
 
@@ -47,7 +51,8 @@ set acc_calibration = 10,72,-174,1
 set rssi_channel = 8
 set rc_smoothing_derivative_type = BIQUAD
 set serialrx_provider = SRXL2
-set failsafe_off_delay = 100
+set failsafe_off_delay = 200
+set failsafe_throttle = 1200
 set failsafe_procedure = AUTO-LAND
 set bat_capacity = 2200
 set current_meter = ESC
@@ -68,9 +73,11 @@ set osd_rate_profile_name_pos = 438
 set osd_pid_profile_name_pos = 2135
 set osd_stat_min_link_quality = ON
 set debug_mode = FF_INTERPOLATED
+set vtx_band = 4
+set vtx_channel = 6
 set vtx_power = 1
 set vtx_low_power_disarm = ON
-set vtx_freq = 5780
+set vtx_freq = 5840
 set gyro_1_align_yaw = 2700
 set name = SchuftCopter03
 
