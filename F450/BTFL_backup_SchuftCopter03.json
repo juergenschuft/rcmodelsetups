@@ -1,6 +1,6 @@
 {
-	"generatedBy": "10.6.0",
-	"apiVersion": "1.42.0",
+	"generatedBy": "10.7.0",
+	"apiVersion": "1.43.0",
 	"profiles": [
 		{
 			"PID": {
@@ -57,7 +57,8 @@
 				"pitch_rate_limit": 1998,
 				"yaw_rate_limit": 1998,
 				"throttleLimitType": 0,
-				"throttleLimitPercent": 100
+				"throttleLimitPercent": 100,
+				"rates_type": 0
 			},
 			"AccTrim": [
 				0,
@@ -656,7 +657,8 @@
 				"pitch_rate_limit": 1998,
 				"yaw_rate_limit": 1998,
 				"throttleLimitType": 0,
-				"throttleLimitPercent": 100
+				"throttleLimitPercent": 100,
+				"rates_type": 0
 			},
 			"AccTrim": [
 				0,
@@ -1255,7 +1257,8 @@
 				"pitch_rate_limit": 1998,
 				"yaw_rate_limit": 1998,
 				"throttleLimitType": 0,
-				"throttleLimitPercent": 100
+				"throttleLimitPercent": 100,
+				"rates_type": 0
 			},
 			"AccTrim": [
 				0,
@@ -2295,7 +2298,7 @@
 		"mag_hardware": 1
 	},
 	"PID_ADVANCED_CONFIG": {
-		"gyro_sync_denom": 4,
+		"gyro_sync_denom": 1,
 		"pid_process_denom": 1,
 		"use_unsyncedPwm": 0,
 		"fast_pwm_protocol": 7,
@@ -2309,7 +2312,7 @@
 		"gyroOffsetYaw": 0,
 		"gyroCheckOverflow": 2,
 		"debugMode": 59,
-		"debugModeCount": 60
+		"debugModeCount": 63
 	},
 	"LED_MODE_COLORS": [
 		{
@@ -2576,7 +2579,7 @@
 		"gyro_2_align": 1
 	},
 	"RX_CONFIG": {
-		"serialrx_provider": 10,
+		"serialrx_provider": 13,
 		"stick_max": 1900,
 		"stick_center": 1500,
 		"stick_min": 1050,
@@ -2601,11 +2604,11 @@
 	},
 	"FAILSAFE_CONFIG": {
 		"failsafe_delay": 4,
-		"failsafe_off_delay": 10,
-		"failsafe_throttle": 1000,
+		"failsafe_off_delay": 200,
+		"failsafe_throttle": 1200,
 		"failsafe_switch_mode": 0,
 		"failsafe_throttle_low_delay": 100,
-		"failsafe_procedure": 1
+		"failsafe_procedure": 0
 	},
 	"RXFAIL_CONFIG": [
 		{
@@ -2655,6 +2658,86 @@
 		{
 			"mode": 1,
 			"value": 1500
+		},
+		{
+			"mode": 1,
+			"value": 1500
+		},
+		{
+			"mode": 1,
+			"value": 1500
+		},
+		{
+			"mode": 1,
+			"value": 1500
+		},
+		{
+			"mode": 1,
+			"value": 1500
+		},
+		{
+			"mode": 1,
+			"value": 1500
+		},
+		{
+			"mode": 1,
+			"value": 1500
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
+		},
+		{
+			"mode": 0,
+			"value": 750
 		}
 	],
 	"RSSI_CONFIG": {
@@ -2682,7 +2765,7 @@
 				},
 				{
 					"bit": 4,
-					"group": "esc",
+					"group": "escMotorStop",
 					"name": "MOTOR_STOP"
 				},
 				{
@@ -2775,13 +2858,15 @@
 				},
 				{
 					"bit": 27,
-					"group": "esc",
+					"group": "escSensor",
 					"name": "ESC_SENSOR"
 				},
 				{
 					"bit": 28,
-					"group": "other",
-					"name": "ANTI_GRAVITY"
+					"group": "antiGravity",
+					"name": "ANTI_GRAVITY",
+					"haveTip": true,
+					"hideName": true
 				},
 				{
 					"bit": 29,
@@ -2806,10 +2891,9 @@
 		"provider": 0,
 		"ublox_sbas": 0,
 		"auto_config": 1,
-		"auto_baud": 0
-	},
-	"COMPASS_CONFIG": {
-		"mag_declination": 0
+		"auto_baud": 0,
+		"home_point_once": 0,
+		"ublox_use_galileo": 0
 	},
 	"BEEPER_CONFIG": {
 		"beepers": {
@@ -2930,7 +3014,7 @@
 					"visible": true
 				}
 			],
-			"_beeperMask": 0
+			"_beeperMask": 196608
 		},
 		"dshotBeaconTone": 1,
 		"dshotBeaconConditions": {
