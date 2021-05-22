@@ -157,19 +157,19 @@
 					}
 				},
 				{
-					"id": 13,
-					"auxChannelIndex": 1,
+					"id": 27,
+					"auxChannelIndex": 2,
 					"range": {
-						"start": 1950,
-						"end": 2050
+						"start": 950,
+						"end": 1050
 					}
 				},
 				{
-					"id": 0,
-					"auxChannelIndex": 0,
+					"id": 13,
+					"auxChannelIndex": 2,
 					"range": {
-						"start": 900,
-						"end": 900
+						"start": 1950,
+						"end": 2050
 					}
 				},
 				{
@@ -757,19 +757,19 @@
 					}
 				},
 				{
-					"id": 13,
-					"auxChannelIndex": 1,
+					"id": 27,
+					"auxChannelIndex": 2,
 					"range": {
-						"start": 1950,
-						"end": 2050
+						"start": 950,
+						"end": 1050
 					}
 				},
 				{
-					"id": 0,
-					"auxChannelIndex": 0,
+					"id": 13,
+					"auxChannelIndex": 2,
 					"range": {
-						"start": 900,
-						"end": 900
+						"start": 1950,
+						"end": 2050
 					}
 				},
 				{
@@ -1357,19 +1357,19 @@
 					}
 				},
 				{
-					"id": 13,
-					"auxChannelIndex": 1,
+					"id": 27,
+					"auxChannelIndex": 2,
 					"range": {
-						"start": 1950,
-						"end": 2050
+						"start": 950,
+						"end": 1050
 					}
 				},
 				{
-					"id": 0,
-					"auxChannelIndex": 0,
+					"id": 13,
+					"auxChannelIndex": 2,
 					"range": {
-						"start": 900,
-						"end": 900
+						"start": 1950,
+						"end": 2050
 					}
 				},
 				{
@@ -2884,7 +2884,7 @@
 		"mincommand": 1000,
 		"motor_count": 4,
 		"motor_poles": 14,
-		"use_dshot_telemetry": false,
+		"use_dshot_telemetry": true,
 		"use_esc_sensor": true
 	},
 	"GPS_CONFIG": {
@@ -3050,12 +3050,12 @@
 			"linkedTo": 0
 		},
 		{
-			"id": 13,
+			"id": 27,
 			"modeLogic": 0,
 			"linkedTo": 0
 		},
 		{
-			"id": 0,
+			"id": 13,
 			"modeLogic": 0,
 			"linkedTo": 0
 		},

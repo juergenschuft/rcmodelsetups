@@ -32,7 +32,8 @@ serial 4 1024 115200 57600 0 115200
 aux 0 0 0 1975 2025 0 0
 aux 1 1 1 1950 2050 0 0
 aux 2 2 1 950 1050 0 0
-aux 3 13 1 1950 2050 0 0
+aux 3 27 2 950 1050 0 0
+aux 4 13 2 1950 2050 0 0
 
 # vtxtable
 vtxtable bands 6
@@ -43,8 +44,8 @@ vtxtable band 3 UNKNOWN  U FACTORY    0    0    0    0    0    0    0    0
 vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860    0
 vtxtable band 5 RACEBAND R FACTORY    0    0 5732 5769 5806 5843    0    0
 vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
-vtxtable powerlevels 1
-vtxtable powerlabels 200
+vtxtable powerlevels 4
+vtxtable powerlabels 25 100 200 400
 
 # master
 set acc_calibration = 10,72,-174,1
@@ -79,11 +80,10 @@ set osd_stat_bbox = OFF
 set osd_stat_bb_no = OFF
 set osd_stat_min_link_quality = ON
 set debug_mode = FF_INTERPOLATED
-set vtx_band = 4
-set vtx_channel = 6
-set vtx_power = 1
-set vtx_low_power_disarm = ON
-set vtx_freq = 5840
+set vtx_band = 1
+set vtx_channel = 2
+set vtx_power = 4
+set vtx_freq = 5845
 set gyro_1_align_yaw = 2700
 set name = SchuftCopter03
 
