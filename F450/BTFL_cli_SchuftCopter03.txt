@@ -47,11 +47,18 @@ vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
 vtxtable powerlevels 4
 vtxtable powerlabels 25 100 200 400
 
+# rxfail
+rxfail 0 h
+rxfail 1 h
+rxfail 2 h
+rxfail 3 h
+
 # master
 set acc_calibration = 10,72,-174,1
 set rc_smoothing_derivative_type = BIQUAD
 set serialrx_provider = SRXL2
 set dshot_bidir = ON
+set failsafe_delay = 0
 set failsafe_off_delay = 200
 set failsafe_throttle = 1200
 set failsafe_procedure = AUTO-LAND

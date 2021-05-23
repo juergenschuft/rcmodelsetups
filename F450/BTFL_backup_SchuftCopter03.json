@@ -2603,7 +2603,7 @@
 		"usbCdcHidType": 0
 	},
 	"FAILSAFE_CONFIG": {
-		"failsafe_delay": 4,
+		"failsafe_delay": 0,
 		"failsafe_off_delay": 200,
 		"failsafe_throttle": 1200,
 		"failsafe_switch_mode": 0,
@@ -2612,19 +2612,19 @@
 	},
 	"RXFAIL_CONFIG": [
 		{
-			"mode": 0,
+			"mode": 1,
 			"value": 1500
 		},
 		{
-			"mode": 0,
+			"mode": 1,
 			"value": 1500
 		},
 		{
-			"mode": 0,
+			"mode": 1,
 			"value": 1500
 		},
 		{
-			"mode": 0,
+			"mode": 1,
 			"value": 875
 		},
 		{
