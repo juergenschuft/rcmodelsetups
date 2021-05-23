@@ -1,4 +1,4 @@
-# 
+Entering CLI Mode, 
 
 # diff
 
@@ -60,7 +60,7 @@ set serialrx_provider = SRXL2
 set dshot_bidir = ON
 set failsafe_delay = 0
 set failsafe_off_delay = 200
-set failsafe_throttle = 1200
+set failsafe_throttle = 1350
 set failsafe_procedure = AUTO-LAND
 set bat_capacity = 2200
 set current_meter = ESC
