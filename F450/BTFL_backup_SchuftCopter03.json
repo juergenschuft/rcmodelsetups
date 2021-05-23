@@ -157,19 +157,19 @@
 					}
 				},
 				{
-					"id": 27,
-					"auxChannelIndex": 2,
-					"range": {
-						"start": 950,
-						"end": 1050
-					}
-				},
-				{
 					"id": 13,
 					"auxChannelIndex": 2,
 					"range": {
 						"start": 1950,
 						"end": 2050
+					}
+				},
+				{
+					"id": 0,
+					"auxChannelIndex": 0,
+					"range": {
+						"start": 900,
+						"end": 900
 					}
 				},
 				{
@@ -757,19 +757,19 @@
 					}
 				},
 				{
-					"id": 27,
-					"auxChannelIndex": 2,
-					"range": {
-						"start": 950,
-						"end": 1050
-					}
-				},
-				{
 					"id": 13,
 					"auxChannelIndex": 2,
 					"range": {
 						"start": 1950,
 						"end": 2050
+					}
+				},
+				{
+					"id": 0,
+					"auxChannelIndex": 0,
+					"range": {
+						"start": 900,
+						"end": 900
 					}
 				},
 				{
@@ -1357,19 +1357,19 @@
 					}
 				},
 				{
-					"id": 27,
-					"auxChannelIndex": 2,
-					"range": {
-						"start": 950,
-						"end": 1050
-					}
-				},
-				{
 					"id": 13,
 					"auxChannelIndex": 2,
 					"range": {
 						"start": 1950,
 						"end": 2050
+					}
+				},
+				{
+					"id": 0,
+					"auxChannelIndex": 0,
+					"range": {
+						"start": 900,
+						"end": 900
 					}
 				},
 				{
@@ -2604,9 +2604,9 @@
 	},
 	"FAILSAFE_CONFIG": {
 		"failsafe_delay": 0,
-		"failsafe_off_delay": 200,
-		"failsafe_throttle": 1350,
-		"failsafe_switch_mode": 0,
+		"failsafe_off_delay": 100,
+		"failsafe_throttle": 1500,
+		"failsafe_switch_mode": 2,
 		"failsafe_throttle_low_delay": 100,
 		"failsafe_procedure": 0
 	},
@@ -2628,11 +2628,11 @@
 			"value": 875
 		},
 		{
-			"mode": 1,
-			"value": 1500
+			"mode": 2,
+			"value": 2000
 		},
 		{
-			"mode": 1,
+			"mode": 2,
 			"value": 1500
 		},
 		{
@@ -2875,7 +2875,8 @@
 				}
 			],
 			"_featureMask": 943981640,
-			"_analyticsChanges": {}
+			"_analyticsChanges": {},
+			"_featureChanges": {}
 		}
 	},
 	"MOTOR_CONFIG": {
@@ -3050,12 +3051,12 @@
 			"linkedTo": 0
 		},
 		{
-			"id": 27,
+			"id": 13,
 			"modeLogic": 0,
 			"linkedTo": 0
 		},
 		{
-			"id": 13,
+			"id": 0,
 			"modeLogic": 0,
 			"linkedTo": 0
 		},

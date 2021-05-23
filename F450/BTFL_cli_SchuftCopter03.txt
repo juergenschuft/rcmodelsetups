@@ -1,4 +1,4 @@
-Entering CLI Mode, 
+# 
 
 # diff
 
@@ -32,8 +32,7 @@ serial 4 1024 115200 57600 0 115200
 aux 0 0 0 1975 2025 0 0
 aux 1 1 1 1950 2050 0 0
 aux 2 2 1 950 1050 0 0
-aux 3 27 2 950 1050 0 0
-aux 4 13 2 1950 2050 0 0
+aux 3 13 2 1950 2050 0 0
 
 # vtxtable
 vtxtable bands 6
@@ -52,6 +51,8 @@ rxfail 0 h
 rxfail 1 h
 rxfail 2 h
 rxfail 3 h
+rxfail 4 s 2000
+rxfail 5 s 1500
 
 # master
 set acc_calibration = 10,72,-174,1
@@ -59,8 +60,9 @@ set rc_smoothing_derivative_type = BIQUAD
 set serialrx_provider = SRXL2
 set dshot_bidir = ON
 set failsafe_delay = 0
-set failsafe_off_delay = 200
-set failsafe_throttle = 1350
+set failsafe_off_delay = 100
+set failsafe_throttle = 1500
+set failsafe_switch_mode = STAGE2
 set failsafe_procedure = AUTO-LAND
 set bat_capacity = 2200
 set current_meter = ESC
