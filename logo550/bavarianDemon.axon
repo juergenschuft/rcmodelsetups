@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<BavarianDemon:Axon Language="1" xmlns:BavarianDemon="http://www.bavariandemon.com/">
+<BavarianDemon:Axon Language="0" xmlns:BavarianDemon="http://www.bavariandemon.com/">
   <BavarianDemon:IsHeadGyroAvailable>false</BavarianDemon:IsHeadGyroAvailable>
   <BavarianDemon:IsTailGyroAvailable>false</BavarianDemon:IsTailGyroAvailable>
   <BavarianDemon:FlashVersion>4</BavarianDemon:FlashVersion>
@@ -34,7 +34,7 @@
   <BavarianDemon:FailSafeThrottleValue>-101</BavarianDemon:FailSafeThrottleValue>
   <BavarianDemon:FailSafeHorizonValue>73</BavarianDemon:FailSafeHorizonValue>
   <BavarianDemon:FailSafeAuxValue>-128</BavarianDemon:FailSafeAuxValue>
-  <BavarianDemon:Deadband>1</BavarianDemon:Deadband>
+  <BavarianDemon:Deadband>2</BavarianDemon:Deadband>
   <BavarianDemon:DiagnosisAileron>0</BavarianDemon:DiagnosisAileron>
   <BavarianDemon:DiagnosisElevator>0</BavarianDemon:DiagnosisElevator>
   <BavarianDemon:DiagnosisPitch>0</BavarianDemon:DiagnosisPitch>
