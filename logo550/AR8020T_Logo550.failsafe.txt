@@ -1,0 +1,11 @@
+- vorwärtsprogrammierung
+- alles auf preset/voreingestellt
+- gas: 20
+- roll: 0
+- nick: 0
+- heck: 0
+- kreisel: 80
+- pitch: 25
+- K7: 0
+- K8: 100 ( = horizont-modus )
+- K9: 0
