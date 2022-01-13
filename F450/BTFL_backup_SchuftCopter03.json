@@ -2603,7 +2603,7 @@
 		"usbCdcHidType": 0
 	},
 	"FAILSAFE_CONFIG": {
-		"failsafe_delay": 0,
+		"failsafe_delay": 20,
 		"failsafe_off_delay": 100,
 		"failsafe_throttle": 1500,
 		"failsafe_switch_mode": 2,
@@ -2875,7 +2875,8 @@
 				}
 			],
 			"_featureMask": 943981640,
-			"_analyticsChanges": {}
+			"_analyticsChanges": {},
+			"_featureChanges": {}
 		}
 	},
 	"MOTOR_CONFIG": {
