@@ -50,13 +50,14 @@ vtxtable powerlabels 25 100 200 400
 rxfail 2 s 2000
 rxfail 4 s 2000
 rxfail 5 s 1500
+rxfail 6 s 2000
 
 # master
 set acc_calibration = 13,100,-135,1
 set rc_smoothing_derivative_type = BIQUAD
 set serialrx_provider = SRXL2
 set dshot_bidir = ON
-set failsafe_delay = 0
+set failsafe_delay = 20
 set failsafe_off_delay = 100
 set failsafe_throttle = 1500
 set failsafe_switch_mode = STAGE2
