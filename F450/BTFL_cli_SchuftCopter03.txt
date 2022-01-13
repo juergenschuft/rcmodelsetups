@@ -1,9 +1,9 @@
-# 9213541739
+# 
 
 # diff
 
 # version
-# Betaflight / STM32F405 (S405) 4.2.9 Apr 27 2021 / 19:33:01 (e097f4ab7) MSP API: 1.43
+# Betaflight / STM32F405 (S405) 4.2.11 Nov  9 2021 / 20:27:49 (948ba6339) MSP API: 1.43
 # config: manufacturer_id: MTKS, board_name: MATEKF405CTR, version: f173f9bc, date: 2019-10-02T14:43:13Z
 
 # start the command batch
@@ -89,6 +89,7 @@ set debug_mode = FF_INTERPOLATED
 set vtx_band = 1
 set vtx_channel = 2
 set vtx_power = 4
+set vtx_low_power_disarm = ON
 set vtx_freq = 5845
 set gyro_1_align_yaw = 2700
 set name = SchuftCopter03
