@@ -44,7 +44,8 @@ vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860    0
 vtxtable band 5 RACEBAND R FACTORY    0    0 5732 5769 5806 5843    0    0
 vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
 vtxtable powerlevels 4
-vtxtable powerlabels 25 100 200 400
+vtxtable powervalues 0 1 2 4
+vtxtable powerlabels 25 200 500 800
 
 # rxfail
 rxfail 2 s 2000
@@ -89,7 +90,7 @@ set osd_stat_min_link_quality = ON
 set debug_mode = FF_INTERPOLATED
 set vtx_band = 1
 set vtx_channel = 2
-set vtx_power = 4
+set vtx_power = 2
 set vtx_low_power_disarm = ON
 set vtx_freq = 5845
 set gyro_1_align_yaw = 2700
