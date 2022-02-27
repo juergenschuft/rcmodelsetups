@@ -3,7 +3,7 @@
 # diff
 
 # version
-# Betaflight / STM32F405 (S405) 4.2.9 Apr 27 2021 / 19:33:01 (e097f4ab7) MSP API: 1.43
+# Betaflight / STM32F405 (S405) 4.2.11 Nov  9 2021 / 20:27:49 (948ba6339) MSP API: 1.43
 # config: manufacturer_id: MTKS, board_name: MATEKF405CTR, version: f173f9bc, date: 2019-10-02T14:43:13Z
 
 # start the command batch
@@ -32,7 +32,7 @@ serial 4 1024 115200 57600 0 115200
 aux 0 0 0 1975 2025 0 0
 aux 1 1 1 1950 2050 0 0
 aux 2 2 1 950 1050 0 0
-aux 3 13 1 1950 2050 0 0
+aux 3 13 2 1950 2050 0 0
 
 # vtxtable
 vtxtable bands 6
@@ -43,16 +43,25 @@ vtxtable band 3 UNKNOWN  U FACTORY    0    0    0    0    0    0    0    0
 vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860    0
 vtxtable band 5 RACEBAND R FACTORY    0    0 5732 5769 5806 5843    0    0
 vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
-vtxtable powerlevels 1
-vtxtable powerlabels 200
+vtxtable powerlevels 4
+vtxtable powervalues 0 1 2 3
+vtxtable powerlabels 25 200 500 800
+
+# rxfail
+rxfail 2 s 2000
+rxfail 4 s 2000
+rxfail 5 s 1500
+rxfail 6 s 2000
 
 # master
-set acc_calibration = 10,72,-174,1
+set acc_calibration = 13,100,-135,1
 set rc_smoothing_derivative_type = BIQUAD
 set serialrx_provider = SRXL2
 set dshot_bidir = ON
-set failsafe_off_delay = 200
-set failsafe_throttle = 1200
+set failsafe_delay = 20
+set failsafe_off_delay = 100
+set failsafe_throttle = 1500
+set failsafe_switch_mode = STAGE2
 set failsafe_procedure = AUTO-LAND
 set bat_capacity = 2200
 set current_meter = ESC
@@ -79,11 +88,11 @@ set osd_stat_bbox = OFF
 set osd_stat_bb_no = OFF
 set osd_stat_min_link_quality = ON
 set debug_mode = FF_INTERPOLATED
-set vtx_band = 4
-set vtx_channel = 6
-set vtx_power = 1
+set vtx_band = 1
+set vtx_channel = 2
+set vtx_power = 2
 set vtx_low_power_disarm = ON
-set vtx_freq = 5840
+set vtx_freq = 5845
 set gyro_1_align_yaw = 2700
 set name = SchuftCopter03
 
