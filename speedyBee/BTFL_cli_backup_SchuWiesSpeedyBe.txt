@@ -100,6 +100,9 @@ feature OSD
 serial 0 64 115200 57600 0 115200
 serial 2 8192 115200 57600 0 115200
 
+# beacon
+beacon RX_SET
+
 # led
 led 0 8,0::CB:1
 led 1 9,0::CB:1
