@@ -1,10 +1,11 @@
 defaults nosave
 
-###WARNING: NO CUSTOM DEFAULTS FOUND###
 
 # version
-# Betaflight / STM32F405 (S405) 4.3.2 Nov 28 2022 / 07:26:30 (60c9521) MSP API: 1.44
-###ERROR IN diff: NO CONFIG FOUND###
+# Betaflight / STM32F405 (S405) 4.4.2 Jun  8 2023 / 13:12:36 (23d066d08) MSP API: 1.45
+
+# config: YES
+
 # start the command batch
 batch start
 
@@ -18,87 +19,21 @@ signature
 
 # name: SchuWiesSpeedyBe
 
-# resources
-resource BEEPER 1 A08
-resource MOTOR 1 A03
-resource MOTOR 2 B00
-resource MOTOR 3 B01
-resource MOTOR 4 A02
-resource PPM 1 C09
-resource LED_STRIP 1 A00
-resource SERIAL_TX 1 A09
-resource SERIAL_TX 3 B10
-resource SERIAL_TX 6 C06
-resource SERIAL_RX 1 A10
-resource SERIAL_RX 3 B11
-resource SERIAL_RX 6 C07
-resource INVERTER 1 C00
-resource I2C_SCL 1 B06
-resource I2C_SDA 1 B07
-resource LED 1 B05
-resource LED 2 B04
-resource SPI_SCK 1 A05
-resource SPI_SCK 2 B13
-resource SPI_SCK 3 C10
-resource SPI_MISO 1 A06
-resource SPI_MISO 2 B14
-resource SPI_MISO 3 C11
-resource SPI_MOSI 1 A07
-resource SPI_MOSI 2 B15
-resource SPI_MOSI 3 C12
-resource ESCSERIAL 1 C09
-resource CAMERA_CONTROL 1 B09
-resource ADC_BATT 1 C01
-resource ADC_RSSI 1 C02
-resource ADC_CURR 1 C03
-resource FLASH_CS 1 B03
-resource OSD_CS 1 B12
-resource GYRO_EXTI 1 C04
-resource GYRO_CS 1 A04
-resource USB_DETECT 1 C05
-
 # timer
-timer C09 AF3
-# pin C09: TIM8 CH4 (AF3)
-timer A03 AF1
-# pin A03: TIM2 CH4 (AF1)
-timer B00 AF2
-# pin B00: TIM3 CH3 (AF2)
 timer B01 AF1
 # pin B01: TIM1 CH3N (AF1)
-timer A02 AF1
-# pin A02: TIM2 CH3 (AF1)
-timer A00 AF2
-# pin A00: TIM5 CH1 (AF2)
-timer B09 AF3
-# pin B09: TIM11 CH1 (AF3)
 
 # dma
-dma ADC 1 1
-# ADC 1: DMA2 Stream 4 Channel 0
-dma pin C09 0
-# pin C09: DMA2 Stream 7 Channel 7
-dma pin A03 1
-# pin A03: DMA1 Stream 6 Channel 3
-dma pin B00 0
-# pin B00: DMA1 Stream 7 Channel 5
 dma pin B01 0
 # pin B01: DMA2 Stream 6 Channel 0
-dma pin A02 0
-# pin A02: DMA1 Stream 1 Channel 3
-dma pin A00 0
-# pin A00: DMA1 Stream 2 Channel 6
 
 # feature
-feature -RX_PARALLEL_PWM
-feature RX_SERIAL
-feature TELEMETRY
+feature -TELEMETRY
 feature LED_STRIP
-feature OSD
 
 # serial
 serial 0 64 115200 57600 0 115200
-serial 2 8192 115200 57600 0 115200
+serial 2 131073 115200 57600 0 115200
 
 # beacon
 beacon RX_SET
@@ -119,76 +54,102 @@ aux 1 1 2 900 1100 0 0
 aux 2 2 2 1900 2100 0 0
 aux 3 13 0 900 1100 0 0
 
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I CUSTOM     0    0    0    0    0    0    0    0
+
 # master
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_static_hz = 600
+set dyn_notch_min_hz = 90
+set dyn_notch_max_hz = 800
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 0
+set acc_lpf_hz = 10
 set acc_calibration = 42,-5,38,1
-set mag_hardware = NONE
 set baro_hardware = NONE
 set rssi_src_frame_errors = ON
-set serialrx_provider = CRSF
-set blackbox_device = SPIFLASH
-set motor_pwm_protocol = DSHOT600
 set motor_output_reordering = 3,2,1,0,4,5,6,7
-set align_board_yaw = 180
-set current_meter = ADC
-set battery_meter = ADC
-set beeper_inversion = ON
-set beeper_od = OFF
-set system_hse_mhz = 8
-set max7456_spi_bus = 2
-set dashboard_i2c_bus = 1
-set flash_spi_bus = 3
-set gyro_1_bustype = SPI
-set gyro_1_spibus = 1
-set gyro_1_sensor_align = CW180
+set gps_sbas_mode = EGNOS
+set gps_auto_baud = ON
+set gps_ublox_use_galileo = ON
+set gps_set_home_point_once = ON
+set pid_process_denom = 2
+set simplified_gyro_filter_multiplier = 120
+set osd_vbat_pos = 2081
+set osd_rssi_pos = 2104
+set osd_link_quality_pos = 2168
+set osd_rssi_dbm_pos = 2136
+set osd_throttle_pos = 2401
+set osd_ah_pos = 2126
+set osd_gps_sats_pos = 2145
+set osd_home_dist_pos = 88
+set osd_core_temp_pos = 2113
+set osd_displayport_device = MSP
+set osd_canvas_width = 30
+set osd_canvas_height = 13
+set vcd_video_system = HD
+set gyro_1_sensor_align = DEFAULT
 set gyro_1_align_yaw = 1800
 set gyro_2_spibus = 1
-set name = SchuWiesSpeedyBe
+set rpm_filter_q = 1000
+set rpm_filter_fade_range_hz = 100
+set craft_name = SchuWiesSpeedyBe
+set pilot_name = Felix und Jürgen
 
 profile 0
 
 # profile 0
-set anti_gravity_gain = 4200
-set iterm_relax_cutoff = 10
-set throttle_boost = 0
-set p_pitch = 54
-set i_pitch = 130
-set d_pitch = 34
-set f_pitch = 183
-set p_roll = 49
-set i_roll = 118
-set d_roll = 30
-set f_roll = 168
-set p_yaw = 49
-set i_yaw = 118
-set f_yaw = 168
-set dyn_idle_min_rpm = 30
-set simplified_i_gain = 135
+set dterm_lpf1_dyn_min_hz = 0
+set dterm_lpf1_dyn_max_hz = 0
+set dterm_lpf1_dyn_expo = 0
+set dterm_lpf1_static_hz = 105
+set dterm_lpf2_static_hz = 210
+set anti_gravity_gain = 100
+set p_pitch = 77
+set i_pitch = 117
+set d_pitch = 39
+set f_pitch = 168
+set p_roll = 64
+set i_roll = 97
+set d_roll = 35
+set f_roll = 140
+set p_yaw = 64
+set i_yaw = 97
+set f_yaw = 140
+set d_min_roll = 35
+set d_min_pitch = 39
+set simplified_master_multiplier = 130
+set simplified_i_gain = 85
+set simplified_d_gain = 90
 set simplified_pi_gain = 110
 set simplified_dmax_gain = 0
-set simplified_feedforward_gain = 140
-set simplified_pitch_pi_gain = 105
+set simplified_feedforward_gain = 90
+set simplified_pitch_pi_gain = 115
+set simplified_dterm_filter_multiplier = 140
 
 profile 1
 
 profile 2
+
+profile 3
 
 # restore original profile selection
 profile 0
 
 rateprofile 0
 
-# rateprofile 0
-set tpa_mode = PD
-
 rateprofile 1
 
 rateprofile 2
 
 rateprofile 3
-
-rateprofile 4
-
-rateprofile 5
 
 # restore original rateprofile selection
 rateprofile 0
