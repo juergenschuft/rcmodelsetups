@@ -29,14 +29,13 @@ dma pin B01 0
 
 # feature
 feature -TELEMETRY
+feature GPS
 feature LED_STRIP
 
 # serial
 serial 0 64 115200 57600 0 115200
 serial 2 131073 115200 57600 0 115200
-
-# beacon
-beacon RX_SET
+serial 5 2 115200 57600 0 115200
 
 # led
 led 0 8,0::CB:1
@@ -63,19 +62,29 @@ vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
 vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
 vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
 vtxtable band 6 IMD6     I CUSTOM     0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
 
 # master
 set gyro_lpf1_static_hz = 0
 set gyro_lpf2_static_hz = 600
+set dyn_notch_count = 5
+set dyn_notch_q = 400
 set dyn_notch_min_hz = 90
 set dyn_notch_max_hz = 800
 set gyro_lpf1_dyn_min_hz = 0
 set gyro_lpf1_dyn_max_hz = 0
 set acc_lpf_hz = 10
-set acc_calibration = 42,-5,38,1
+set acc_calibration = 33,-22,32,1
 set baro_hardware = NONE
 set rssi_src_frame_errors = ON
+set rc_smoothing_auto_factor = 45
+set rc_smoothing_auto_factor_throttle = 45
+set motor_pwm_protocol = DSHOT300
 set motor_output_reordering = 3,2,1,0,4,5,6,7
+set failsafe_off_delay = 100
+set failsafe_procedure = GPS-RESCUE
 set gps_sbas_mode = EGNOS
 set gps_auto_baud = ON
 set gps_ublox_use_galileo = ON
@@ -86,11 +95,14 @@ set osd_vbat_pos = 2081
 set osd_rssi_pos = 2104
 set osd_link_quality_pos = 2168
 set osd_rssi_dbm_pos = 2136
+set osd_flymode_pos = 2285
 set osd_throttle_pos = 2401
-set osd_ah_pos = 2126
-set osd_gps_sats_pos = 2145
+set osd_ah_pos = 2095
+set osd_gps_sats_pos = 2177
 set osd_home_dist_pos = 88
+set osd_altitude_pos = 2209
 set osd_core_temp_pos = 2113
+set osd_sys_vtx_temp_pos = 2145
 set osd_displayport_device = MSP
 set osd_canvas_width = 30
 set osd_canvas_height = 13
@@ -98,10 +110,8 @@ set vcd_video_system = HD
 set gyro_1_sensor_align = DEFAULT
 set gyro_1_align_yaw = 1800
 set gyro_2_spibus = 1
-set rpm_filter_q = 1000
-set rpm_filter_fade_range_hz = 100
 set craft_name = SchuWiesSpeedyBe
-set pilot_name = Felix und Jürgen
+set pilot_name = Felix und Jrgen
 
 profile 0
 
@@ -112,20 +122,24 @@ set dterm_lpf1_dyn_expo = 0
 set dterm_lpf1_static_hz = 105
 set dterm_lpf2_static_hz = 210
 set anti_gravity_gain = 100
-set p_pitch = 77
-set i_pitch = 117
-set d_pitch = 39
-set f_pitch = 168
-set p_roll = 64
-set i_roll = 97
-set d_roll = 35
-set f_roll = 140
-set p_yaw = 64
-set i_yaw = 97
-set f_yaw = 140
-set d_min_roll = 35
-set d_min_pitch = 39
-set simplified_master_multiplier = 130
+set p_pitch = 68
+set i_pitch = 103
+set d_pitch = 35
+set f_pitch = 148
+set p_roll = 56
+set i_roll = 86
+set d_roll = 31
+set f_roll = 124
+set p_yaw = 56
+set i_yaw = 86
+set f_yaw = 124
+set d_min_roll = 31
+set d_min_pitch = 35
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 65
+set feedforward_jitter_factor = 3
+set feedforward_boost = 18
+set simplified_master_multiplier = 115
 set simplified_i_gain = 85
 set simplified_d_gain = 90
 set simplified_pi_gain = 110
@@ -144,6 +158,17 @@ profile 3
 profile 0
 
 rateprofile 0
+
+# rateprofile 0
+set roll_rc_rate = 2
+set pitch_rc_rate = 2
+set yaw_rc_rate = 2
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 40
+set roll_srate = 80
+set pitch_srate = 80
+set yaw_srate = 60
 
 rateprofile 1
 
