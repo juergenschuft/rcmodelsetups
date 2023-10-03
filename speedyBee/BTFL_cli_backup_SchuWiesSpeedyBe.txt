@@ -2,7 +2,7 @@ defaults nosave
 
 
 # version
-# Betaflight / STM32F405 (S405) 4.4.2 Jun  8 2023 / 13:12:36 (23d066d08) MSP API: 1.45
+# Betaflight / STM32F405 (S405) 4.4.2 Aug 24 2023 / 14:21:26 (23d066d08) MSP API: 1.45
 
 # config: YES
 
@@ -19,30 +19,16 @@ signature
 
 # name: SchuWiesSpeedyBe
 
-# resources
-resource LED_STRIP 1 NONE
-resource SERIAL_TX 11 A00
-resource LED 1 NONE
-resource LED 2 NONE
-
-# timer
-timer B01 AF1
-# pin B01: TIM1 CH3N (AF1)
-
-# dma
-dma pin B01 0
-# pin B01: DMA2 Stream 6 Channel 0
-
 # feature
 feature -TELEMETRY
-feature SOFTSERIAL
+feature -AIRMODE
 feature GPS
+feature OSD
 
 # serial
 serial 0 64 115200 57600 0 115200
-serial 2 131073 115200 57600 0 115200
-serial 5 2 115200 57600 0 115200
-serial 30 2048 115200 57600 0 115200
+serial 2 2 115200 57600 0 115200
+serial 5 131073 115200 57600 0 115200
 
 # beeper
 beeper -GYRO_CALIBRATED
@@ -67,18 +53,8 @@ beeper -CAM_CONNECTION_OPEN
 beeper -CAM_CONNECTION_CLOSE
 beeper -RC_SMOOTHING_INIT_FAIL
 
-# led
-led 0 8,0::CB:1
-led 1 9,0::CB:1
-led 2 10,0::CB:1
-led 3 11,0::CB:1
-led 4 12,0::CB:1
-led 5 13,0::CB:1
-led 6 14,0::CB:1
-led 7 15,0::CB:1
-
 # aux
-aux 0 0 3 925 1100 0 0
+aux 0 0 3 900 1100 0 0
 aux 1 1 2 900 1100 0 0
 aux 2 2 2 1900 2100 0 0
 aux 3 13 0 900 1100 0 0
@@ -91,10 +67,10 @@ vtxtable band 2 BOSCAM_B B CUSTOM     0    0    0    0    0    0    0    0
 vtxtable band 3 BOSCAM_E E CUSTOM     0    0    0    0    0    0    0    0
 vtxtable band 4 FATSHARK F CUSTOM     0 5760    0 5800    0    0    0    0
 vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
-vtxtable band 6 IMD6     I CUSTOM     0    0    0    0    0    0    0    0
-vtxtable powerlevels 5
-vtxtable powervalues 14 23 27 30 0
-vtxtable powerlabels 25 200 500 MAX 0
+vtxtable band 6 LOWBAND  L CUSTOM     0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
 
 # rxfail
 rxfail 3 s 1275
@@ -102,16 +78,14 @@ rxfail 3 s 1275
 # master
 set gyro_lpf1_static_hz = 0
 set gyro_lpf2_static_hz = 600
-set dyn_notch_count = 5
-set dyn_notch_q = 400
 set dyn_notch_min_hz = 90
 set dyn_notch_max_hz = 800
 set gyro_lpf1_dyn_min_hz = 0
 set gyro_lpf1_dyn_max_hz = 0
 set acc_lpf_hz = 10
-set acc_calibration = 31,-5,44,1
+set acc_calibration = -54,8,38,1
+set mag_i2c_device = 1
 set baro_hardware = NONE
-set rssi_src_frame_errors = ON
 set rc_smoothing_auto_factor = 45
 set rc_smoothing_auto_factor_throttle = 45
 set motor_output_reordering = 3,2,1,0,4,5,6,7
@@ -119,7 +93,6 @@ set failsafe_delay = 5
 set failsafe_off_delay = 100
 set failsafe_throttle = 1200
 set failsafe_procedure = GPS-RESCUE
-set vbat_warning_cell_voltage = 355
 set gps_sbas_mode = AUTO
 set gps_auto_baud = ON
 set gps_ublox_use_galileo = ON
@@ -132,37 +105,38 @@ set gps_rescue_throttle_min = 1200
 set gps_rescue_min_sats = 6
 set pid_process_denom = 2
 set simplified_gyro_filter_multiplier = 120
-set osd_vbat_pos = 2081
-set osd_rssi_pos = 2104
-set osd_link_quality_pos = 2168
-set osd_rssi_dbm_pos = 2136
-set osd_flymode_pos = 2285
-set osd_throttle_pos = 2401
-set osd_ah_pos = 2094
-set osd_gps_sats_pos = 2177
-set osd_home_dir_pos = 2231
-set osd_home_dist_pos = 2232
-set osd_flight_dist_pos = 2241
-set osd_compass_bar_pos = 2314
-set osd_altitude_pos = 2209
-set osd_battery_usage_pos = 2065
-set osd_core_temp_pos = 2113
-set osd_sys_goggle_dvr_pos = 371
-set osd_sys_vtx_temp_pos = 2145
+set osd_vbat_pos = 2145
+set osd_rssi_pos = 3211
+set osd_link_quality_pos = 3147
+set osd_link_tx_power_pos = 385
+set osd_rssi_dbm_pos = 3179
+set osd_flymode_pos = 2423
+set osd_gps_speed_pos = 2305
+set osd_gps_sats_pos = 2337
+set osd_home_dir_pos = 2273
+set osd_home_dist_pos = 2274
+set osd_altitude_pos = 2561
+set osd_power_pos = 2113
+set osd_core_temp_pos = 2177
+set osd_sys_vtx_voltage_pos = 2465
+set osd_sys_distance_pos = 2433
+set osd_sys_vtx_temp_pos = 2401
 set osd_displayport_device = MSP
-set osd_canvas_width = 30
-set osd_canvas_height = 13
+set osd_canvas_width = 50
+set osd_canvas_height = 18
 set vtx_band = 5
-set vtx_channel = 4
+set vtx_channel = 3
 set vtx_power = 2
-set vtx_low_power_disarm = UNTIL_FIRST_ARM
-set vtx_freq = 5769
+set vtx_low_power_disarm = ON
+set vtx_freq = 5732
 set vcd_video_system = HD
 set gyro_1_sensor_align = DEFAULT
 set gyro_1_align_yaw = 1800
 set gyro_2_spibus = 1
+set rpm_filter_q = 1000
+set rpm_filter_fade_range_hz = 100
 set craft_name = SchuWiesSpeedyBe
-set pilot_name = Felix und Jrgen
+set pilot_name = Felix und Jürgen
 
 profile 0
 
