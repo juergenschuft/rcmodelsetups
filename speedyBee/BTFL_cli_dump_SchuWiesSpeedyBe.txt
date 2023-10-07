@@ -227,7 +227,7 @@ beeper -GPS_STATUS
 beeper RX_SET
 beeper -ACC_CALIBRATION
 beeper -ACC_CALIBRATION_FAIL
-beeper -READY_BEEP
+beeper READY_BEEP
 beeper MULTI_BEEPS
 beeper -DISARM_REPEAT
 beeper -ARMED

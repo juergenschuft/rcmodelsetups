@@ -42,7 +42,6 @@ beeper -BAT_LOW
 beeper -GPS_STATUS
 beeper -ACC_CALIBRATION
 beeper -ACC_CALIBRATION_FAIL
-beeper -READY_BEEP
 beeper -DISARM_REPEAT
 beeper -ARMED
 beeper -SYSTEM_INIT
