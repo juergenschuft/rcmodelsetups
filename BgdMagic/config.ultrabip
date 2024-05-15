@@ -1,0 +1,307 @@
+#=============================================================================
+# UltraBip Configuration file, generated on: Fri Jun 09 2023 12:48:35 GMT+0200 (Central European Summer Time)
+#-----------------------------------------------------------------------------
+# Hi there, this is the configuration file for the amazing UltraBip
+# You can edit this file, but be careful. Using the
+# online or offline Configurator is advised.
+# 
+# Enjoy and fly safe...
+# more info on http://www.stodeus.com
+#=============================================================================
+
+[profile1]
+
+enabled_bool=true
+
+identity_profilename_string=                 # annonced at startup (if defined)
+identity_pilotname_string=                   # enter your name. In UltraBip, it will be recorded on the GNSS tracks (mandatory for FAI).
+identity_birthdate_string=                   # enter your date of birth (optional)
+identity_wingname_string=                    # your aircraft name, it will be recorded on the GNSS tracks, mandatory for FAI
+identity_compid_string=                      # your competitor number, mandatory for competitions
+
+vario_liftstart_int=10                       # minimum lift value to start beeping
+vario_integrationtime_int=50                 # vario integration time
+vario_sinkalarm_bool=false                   # alarm when sinking
+vario_sinkstart_int=-350                     # sink alarm threshold
+vario_groundsilent_bool=true                 # enable vario after takeoff detection
+vario_liftysound_bool=false                  # indicate weak positive or negative lift
+vario_sweeptone_bool=true                    # sweep tone of beep tone (tuuuiit-tuuiit or tiiit-tiit)
+
+bluetooth_enable_bool=true                   # enable connectivity with iOS/Android smarphones and tablets
+bluetooth_remoteenable_bool=false            # enable (keyboard) mode to switch pages in your flight computer app (Android/iOS)
+
+voicetap_enable_bool=true                    # announces elements below when double tapping on the device
+voicetap_speed_bool=true                     # announces speed when double tapping
+voicetap_altitude_bool=true                  # announces altitude when double tapping
+voicetap_heading_bool=false                  # announces heading (N-NW-W-SW-S-SE-E-NE) when double tapping
+voicetap_climbrate_bool=true                 # announces climb rate when double tapping
+voicetap_time_bool=false                     # announces the time when double tapping
+voicetap_duration_bool=false                 # announces flight duration when double tapping
+
+voiceauto_enable_bool=false                  # announces elements below when any trigger conditions is met
+voiceauto_speed_bool=true                    # announces speed when any trigger condition is met
+voiceauto_altitude_bool=true                 # announces altitude when any trigger condition is met
+voiceauto_heading_bool=false                 # announces heading (N-NW-W-SW-S-SE-E-NE) when any trigger condition is met
+voiceauto_climbrate_bool=false               # announces climb-rate when any trigger condition is met
+voiceauto_time_bool=false                    # announces clock/time when any trigger condition is met
+voiceauto_duration_bool=true                 # announces flight duration when any trigger condition is met
+voiceauto_altitudetrigger_int=300            # announces automatically with altitude variation
+voiceauto_distancetrigger_int=3000           # announces automatically with distance variation
+voiceauto_timetrigger_int=30                 # announces automatically over time
+
+gps_enable_bool=true                         # enable GPS tracking, required for voice and track recording
+gps_takeoffdetection_bool=true               # enable automatic takeoff detection. If OFF, recording starts immediately
+gps_takeoffdistance_int=100                  # distance to detect takeoff
+
+alarm_minenable_bool=false                   # enable an alarm when crossing a minimum altitude
+alarm_min_int=100                            # airspace floor
+alarm_maxenable_bool=false                   # enable an alarm when crossing a maximum altitude
+alarm_max_int=2000                           # airspace ceiling
+
+flightsummary_enable_bool=true               # announce flight statistics during shutdown
+flightsummary_altitude_bool=true             # announces max altitude in statistics
+flightsummary_speed_bool=true                # announces max speed in statistics
+flightsummary_climbrate_bool=false           # announces max and min climb rate in statistics
+flightsummary_duration_bool=true             # announces flight duration in statistics
+
+led_userled_int=4                            # what information to display on the LED the rest of the time
+
+system_language_string=de
+system_timezoneminutes_int=120               # local time offset from UTC
+system_tapsensitivity_int=3                  # how easy it is to trigger the double tap
+system_autopowerofftime_int=30               # switch off after a certain period of inactivity
+system_voicepackversion_string=2023-06-13
+
+vario_tones_vz_0 = -500
+vario_tones_freq_0 = 62
+vario_tones_duration_0 = 450
+vario_tones_duty_0 = 50
+vario_tones_vz_1 = -350
+vario_tones_freq_1 = 75
+vario_tones_duration_1 = 450
+vario_tones_duty_1 = 100
+vario_tones_vz_2 = -50
+vario_tones_freq_2 = 100
+vario_tones_duration_2 = 450
+vario_tones_duty_2 = 100
+vario_tones_vz_3 = 5
+vario_tones_freq_3 = 440
+vario_tones_duration_3 = 875
+vario_tones_duty_3 = 50
+vario_tones_vz_4 = 80
+vario_tones_freq_4 = 513
+vario_tones_duration_4 = 770
+vario_tones_duty_4 = 26
+vario_tones_vz_5 = 120
+vario_tones_freq_5 = 675
+vario_tones_duration_5 = 500
+vario_tones_duty_5 = 27
+vario_tones_vz_6 = 300
+vario_tones_freq_6 = 845
+vario_tones_duration_6 = 370
+vario_tones_duty_6 = 30
+vario_tones_vz_7 = 800
+vario_tones_freq_7 = 1000
+vario_tones_duration_7 = 230
+vario_tones_duty_7 = 45
+
+[profile2]
+enabled_bool=false
+
+identity_profilename_string=                 # annonced at startup (if defined)
+identity_pilotname_string=  e                # enter your name. In UltraBip, it will be recorded on the GNSS tracks (mandatory for FAI).
+identity_birthdate_string=                   # enter your date of birth (optional)
+identity_wingname_string=                    # your aircraft name, it will be recorded on the GNSS tracks, mandatory for FAI
+identity_compid_string=                      # your competitor number, mandatory for competitions
+
+vario_liftstart_int=10                       # minimum lift value to start beeping
+vario_integrationtime_int=50                 # vario integration time
+vario_sinkalarm_bool=false                   # alarm when sinking
+vario_sinkstart_int=-350                     # sink alarm threshold
+vario_groundsilent_bool=true                 # enable vario after takeoff detection
+vario_liftysound_bool=false                  # indicate weak positive or negative lift
+vario_sweeptone_bool=true                    # sweep tone of beep tone (tuuuiit-tuuiit or tiiit-tiit)
+
+bluetooth_enable_bool=true                   # enable connectivity with iOS/Android smarphones and tablets
+bluetooth_remoteenable_bool=false            # enable (keyboard) mode to switch pages in your flight computer app (Android/iOS)
+
+voicetap_enable_bool=true                    # announces elements below when double tapping on the device
+voicetap_speed_bool=true                     # announces speed when double tapping
+voicetap_altitude_bool=true                  # announces altitude when double tapping
+voicetap_heading_bool=false                  # announces heading (N-NW-W-SW-S-SE-E-NE) when double tapping
+voicetap_climbrate_bool=true                 # announces climb rate when double tapping
+voicetap_time_bool=false                     # announces the time when double tapping
+voicetap_duration_bool=false                 # announces flight duration when double tapping
+
+voiceauto_enable_bool=false                  # announces elements below when any trigger conditions is met
+voiceauto_speed_bool=true                    # announces speed when any trigger condition is met
+voiceauto_altitude_bool=true                 # announces altitude when any trigger condition is met
+voiceauto_heading_bool=false                 # announces heading (N-NW-W-SW-S-SE-E-NE) when any trigger condition is met
+voiceauto_climbrate_bool=false               # announces climb-rate when any trigger condition is met
+voiceauto_time_bool=false                    # announces clock/time when any trigger condition is met
+voiceauto_duration_bool=true                 # announces flight duration when any trigger condition is met
+voiceauto_altitudetrigger_int=300            # announces automatically with altitude variation
+voiceauto_distancetrigger_int=3000           # announces automatically with distance variation
+voiceauto_timetrigger_int=30                 # announces automatically over time
+
+gps_enable_bool=true                         # enable GPS tracking, required for voice and track recording
+gps_takeoffdetection_bool=true               # enable automatic takeoff detection. If OFF, recording starts immediately
+gps_takeoffdistance_int=100                  # distance to detect takeoff
+
+alarm_minenable_bool=false                   # enable an alarm when crossing a minimum altitude
+alarm_min_int=100                            # airspace floor
+alarm_maxenable_bool=false                   # enable an alarm when crossing a maximum altitude
+alarm_max_int=2000                           # airspace ceiling
+
+flightsummary_enable_bool=true               # announce flight statistics during shutdown
+flightsummary_altitude_bool=true             # announces max altitude in statistics
+flightsummary_speed_bool=true                # announces max speed in statistics
+flightsummary_climbrate_bool=false           # announces max and min climb rate in statistics
+flightsummary_duration_bool=true             # announces flight duration in statistics
+
+led_userled_int=4                            # what information to display on the LED the rest of the time
+
+system_language_string=de
+system_timezoneminutes_int=120               # local time offset from UTC
+system_tapsensitivity_int=3                  # how easy it is to trigger the double tap
+system_autopowerofftime_int=30               # switch off after a certain period of inactivity
+system_voicepackversion_string=
+
+vario_tones_vz_0 = -500
+vario_tones_freq_0 = 62
+vario_tones_duration_0 = 450
+vario_tones_duty_0 = 50
+vario_tones_vz_1 = -350
+vario_tones_freq_1 = 75
+vario_tones_duration_1 = 450
+vario_tones_duty_1 = 100
+vario_tones_vz_2 = -50
+vario_tones_freq_2 = 100
+vario_tones_duration_2 = 450
+vario_tones_duty_2 = 100
+vario_tones_vz_3 = 5
+vario_tones_freq_3 = 440
+vario_tones_duration_3 = 875
+vario_tones_duty_3 = 50
+vario_tones_vz_4 = 80
+vario_tones_freq_4 = 513
+vario_tones_duration_4 = 770
+vario_tones_duty_4 = 26
+vario_tones_vz_5 = 120
+vario_tones_freq_5 = 675
+vario_tones_duration_5 = 500
+vario_tones_duty_5 = 27
+vario_tones_vz_6 = 300
+vario_tones_freq_6 = 845
+vario_tones_duration_6 = 370
+vario_tones_duty_6 = 30
+vario_tones_vz_7 = 800
+vario_tones_freq_7 = 1000
+vario_tones_duration_7 = 230
+vario_tones_duty_7 = 45
+
+[profile3]
+enabled_bool=false
+
+identity_profilename_string=                 # annonced at startup (if defined)
+identity_pilotname_string=  e                # enter your name. In UltraBip, it will be recorded on the GNSS tracks (mandatory for FAI).
+identity_birthdate_string=                   # enter your date of birth (optional)
+identity_wingname_string=                    # your aircraft name, it will be recorded on the GNSS tracks, mandatory for FAI
+identity_compid_string=                      # your competitor number, mandatory for competitions
+
+vario_liftstart_int=10                       # minimum lift value to start beeping
+vario_integrationtime_int=50                 # vario integration time
+vario_sinkalarm_bool=false                   # alarm when sinking
+vario_sinkstart_int=-350                     # sink alarm threshold
+vario_groundsilent_bool=true                 # enable vario after takeoff detection
+vario_liftysound_bool=false                  # indicate weak positive or negative lift
+vario_sweeptone_bool=true                    # sweep tone of beep tone (tuuuiit-tuuiit or tiiit-tiit)
+
+bluetooth_enable_bool=true                   # enable connectivity with iOS/Android smarphones and tablets
+bluetooth_remoteenable_bool=false            # enable (keyboard) mode to switch pages in your flight computer app (Android/iOS)
+
+voicetap_enable_bool=true                    # announces elements below when double tapping on the device
+voicetap_speed_bool=true                     # announces speed when double tapping
+voicetap_altitude_bool=true                  # announces altitude when double tapping
+voicetap_heading_bool=false                  # announces heading (N-NW-W-SW-S-SE-E-NE) when double tapping
+voicetap_climbrate_bool=true                 # announces climb rate when double tapping
+voicetap_time_bool=false                     # announces the time when double tapping
+voicetap_duration_bool=false                 # announces flight duration when double tapping
+
+voiceauto_enable_bool=false                  # announces elements below when any trigger conditions is met
+voiceauto_speed_bool=true                    # announces speed when any trigger condition is met
+voiceauto_altitude_bool=true                 # announces altitude when any trigger condition is met
+voiceauto_heading_bool=false                 # announces heading (N-NW-W-SW-S-SE-E-NE) when any trigger condition is met
+voiceauto_climbrate_bool=false               # announces climb-rate when any trigger condition is met
+voiceauto_time_bool=false                    # announces clock/time when any trigger condition is met
+voiceauto_duration_bool=true                 # announces flight duration when any trigger condition is met
+voiceauto_altitudetrigger_int=300            # announces automatically with altitude variation
+voiceauto_distancetrigger_int=3000           # announces automatically with distance variation
+voiceauto_timetrigger_int=30                 # announces automatically over time
+
+gps_enable_bool=true                         # enable GPS tracking, required for voice and track recording
+gps_takeoffdetection_bool=true               # enable automatic takeoff detection. If OFF, recording starts immediately
+gps_takeoffdistance_int=100                  # distance to detect takeoff
+
+alarm_minenable_bool=false                   # enable an alarm when crossing a minimum altitude
+alarm_min_int=100                            # airspace floor
+alarm_maxenable_bool=false                   # enable an alarm when crossing a maximum altitude
+alarm_max_int=2000                           # airspace ceiling
+
+flightsummary_enable_bool=true               # announce flight statistics during shutdown
+flightsummary_altitude_bool=true             # announces max altitude in statistics
+flightsummary_speed_bool=true                # announces max speed in statistics
+flightsummary_climbrate_bool=false           # announces max and min climb rate in statistics
+flightsummary_duration_bool=true             # announces flight duration in statistics
+
+led_userled_int=4                            # what information to display on the LED the rest of the time
+
+system_language_string=de
+system_timezoneminutes_int=120               # local time offset from UTC
+system_tapsensitivity_int=3                  # how easy it is to trigger the double tap
+system_autopowerofftime_int=30               # switch off after a certain period of inactivity
+system_voicepackversion_string=
+
+vario_tones_vz_0 = -500
+vario_tones_freq_0 = 62
+vario_tones_duration_0 = 450
+vario_tones_duty_0 = 50
+vario_tones_vz_1 = -350
+vario_tones_freq_1 = 75
+vario_tones_duration_1 = 450
+vario_tones_duty_1 = 100
+vario_tones_vz_2 = -50
+vario_tones_freq_2 = 100
+vario_tones_duration_2 = 450
+vario_tones_duty_2 = 100
+vario_tones_vz_3 = 5
+vario_tones_freq_3 = 440
+vario_tones_duration_3 = 875
+vario_tones_duty_3 = 50
+vario_tones_vz_4 = 80
+vario_tones_freq_4 = 513
+vario_tones_duration_4 = 770
+vario_tones_duty_4 = 26
+vario_tones_vz_5 = 120
+vario_tones_freq_5 = 675
+vario_tones_duration_5 = 500
+vario_tones_duty_5 = 27
+vario_tones_vz_6 = 300
+vario_tones_freq_6 = 845
+vario_tones_duration_6 = 370
+vario_tones_duty_6 = 30
+vario_tones_vz_7 = 800
+vario_tones_freq_7 = 1000
+vario_tones_duration_7 = 230
+vario_tones_duty_7 = 45
+
+
+[global]
+system_firmwareversion_string=2023-06-30:1fe35e9c
+system_serialnumber_string=0080E12700A6DC8F
+global_timestamp=1686307715
+configurator_version=2023-06-09
+system_hardwareversion_string=UltraBip_v1.1+1
+system_bootloaderversion_string=4
+system_volumehp_string=MED
+system_volumespk_string=MED
