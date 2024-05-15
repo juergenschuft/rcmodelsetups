@@ -1,75 +1,74 @@
 #=============================================================================
-# UltraBip Configuration file, generated on: Fri Jun 09 2023 12:48:35 GMT+0200 (Central European Summer Time)
+# Konfigurationsdatei für leGPSBip, angelegt am: Wed May 15 2024 17:26:04 GMT+0200 (Mitteleuropäische Sommerzeit)
 #-----------------------------------------------------------------------------
-# Hi there, this is the configuration file for the amazing UltraBip
-# You can edit this file, but be careful. Using the
-# online or offline Configurator is advised.
+# Hallo, dies ist die Konfigurationsdatei für das großartige GPSBip
+# Sie können die Datei bearbeiten, aber seien sie vorsichtig. Wir empfehlen Ihnen,©
+# den Konfigurator zu nutzen, der Ihnen jederzeit online und offline zu Verfügung steht.
 # 
-# Enjoy and fly safe...
-# more info on http://www.stodeus.com
+# Guten Flug... und sichere Landung!
+# Mehr Informationen finden sie auf http://www.stodeus.com
 #=============================================================================
 
 [profile1]
-
 enabled_bool=true
 
-identity_profilename_string=                 # annonced at startup (if defined)
-identity_pilotname_string=                   # enter your name. In UltraBip, it will be recorded on the GNSS tracks (mandatory for FAI).
-identity_birthdate_string=                   # enter your date of birth (optional)
-identity_wingname_string=                    # your aircraft name, it will be recorded on the GNSS tracks, mandatory for FAI
-identity_compid_string=                      # your competitor number, mandatory for competitions
+identity_profilename_string=paragliding      # wird beim Start bekannt gegeben (falls definiert)
+identity_pilotname_string=Jürgen Schuft      # Geben Sie Ihren Namen und Vornamen ein, er wird in der GPS-Aufzeichnung abgespeichert. (Verpflichtend für die FAI)
+identity_birthdate_string=1972-01-20         # Geben Sie Ihr Geburtsdatum ein (optional)
+identity_wingname_string=BGD Magic           # Der Name des Luftsportgerätes wird in der GPS-Aufzeichnung gespeichert. (verpflichtend für die FAI)
+identity_compid_string=                      # Ihre Identifikationsnummer, verpflichtend für den Wettkampf.
 
-vario_liftstart_int=10                       # minimum lift value to start beeping
-vario_integrationtime_int=50                 # vario integration time
-vario_sinkalarm_bool=false                   # alarm when sinking
-vario_sinkstart_int=-350                     # sink alarm threshold
-vario_groundsilent_bool=true                 # enable vario after takeoff detection
-vario_liftysound_bool=false                  # indicate weak positive or negative lift
-vario_sweeptone_bool=true                    # sweep tone of beep tone (tuuuiit-tuuiit or tiiit-tiit)
+vario_liftstart_int=10                       # minimale Steigrate für Tonausgabe (bip)
+vario_integrationtime_int=50                 # Vario Integrationszeit
+vario_sinkalarm_bool=false                   # Vario Sinkalarm
+vario_sinkstart_int=-350                     # Auslösewert für Sinken
+vario_groundsilent_bool=true                 # aktiviert das sprechende Vario erst nach Abflug (automatische Abflugserkennung muss aktiviert sein)
+vario_liftysound_bool=false                  # zeigt sehr geringes Steigen an (+/-10cm/s)
+vario_sweeptone_bool=true                    # Das Variometer nutzt keine Konstant- sondern Sweeptöne (tuuuiit-tuuiit ou tiiit-tiit)
 
-bluetooth_enable_bool=true                   # enable connectivity with iOS/Android smarphones and tablets
-bluetooth_remoteenable_bool=false            # enable (keyboard) mode to switch pages in your flight computer app (Android/iOS)
+bluetooth_enable_bool=true                   # Verbindungsmodus für iOS/Android-Smartphone oder -Tablet aktivieren
+bluetooth_remoteenable_bool=false
 
-voicetap_enable_bool=true                    # announces elements below when double tapping on the device
-voicetap_speed_bool=true                     # announces speed when double tapping
-voicetap_altitude_bool=true                  # announces altitude when double tapping
-voicetap_heading_bool=false                  # announces heading (N-NW-W-SW-S-SE-E-NE) when double tapping
-voicetap_climbrate_bool=true                 # announces climb rate when double tapping
-voicetap_time_bool=false                     # announces the time when double tapping
-voicetap_duration_bool=false                 # announces flight duration when double tapping
+voicetap_enable_bool=true                    # Ansage der im folgenden aufgeführten Informationen bei zweimaligen Tippen auf das Gerät
+voicetap_speed_bool=true                     # sagt beim Doppeltippen auch die Geschwindigkeit an
+voicetap_altitude_bool=true                  # sagt bei Doppeltippen die Höhe an
+voicetap_heading_bool=false                  # sagt beim Doppeltippen den Kurs (N-NW-W-SW-S-SO-O-NO) an
+voicetap_climbrate_bool=true                 # sagt beim Doppeltippen auch den Aufstieg an
+voicetap_time_bool=false                     # sagt beim Doppeltippen die Zeit an
+voicetap_duration_bool=false                 # sagt beim Doppeltippen auch die Flugzeit an
 
-voiceauto_enable_bool=false                  # announces elements below when any trigger conditions is met
-voiceauto_speed_bool=true                    # announces speed when any trigger condition is met
-voiceauto_altitude_bool=true                 # announces altitude when any trigger condition is met
-voiceauto_heading_bool=false                 # announces heading (N-NW-W-SW-S-SE-E-NE) when any trigger condition is met
-voiceauto_climbrate_bool=false               # announces climb-rate when any trigger condition is met
-voiceauto_time_bool=false                    # announces clock/time when any trigger condition is met
-voiceauto_duration_bool=true                 # announces flight duration when any trigger condition is met
-voiceauto_altitudetrigger_int=300            # announces automatically with altitude variation
-voiceauto_distancetrigger_int=3000           # announces automatically with distance variation
-voiceauto_timetrigger_int=30                 # announces automatically over time
+voiceauto_enable_bool=false                  # Ansage sobald einer der hier aufgeführten Schwellwerte erreicht wird
+voiceauto_speed_bool=true                    # sagt die Geschwindigkeit bei automatischer Auslösung an
+voiceauto_altitude_bool=true                 # sagt die Höhe bei automatischer Auslösung an
+voiceauto_heading_bool=false                 # sagt den Kurs (N-NW-W-SW-S-SO-O-NO) an
+voiceauto_climbrate_bool=false               # sagt den Aufstieg bei automatischer Auslösung an
+voiceauto_time_bool=false                    # sagt die Zeit bei automatischer Auslösung an
+voiceauto_duration_bool=true                 # sagt die Flugzeit bei automatischer Auslösung an
+voiceauto_altitudetrigger_int=300            # Auslösung bei einer Veränderung der Höhe
+voiceauto_distancetrigger_int=3000           # Auslösung bei Veränderung der zurückgelegten Strecke
+voiceauto_timetrigger_int=30                 # regelmäßige Auslösung mit der Zeit
 
-gps_enable_bool=true                         # enable GPS tracking, required for voice and track recording
-gps_takeoffdetection_bool=true               # enable automatic takeoff detection. If OFF, recording starts immediately
-gps_takeoffdistance_int=100                  # distance to detect takeoff
+gps_enable_bool=true                         # GPS aktivieren (erforderlich für Sprachausgabe und Aufzeichnung)
+gps_takeoffdetection_bool=true               # erkennt automatisch den Start, andernfalls beginnt die Aufzeichnung beim Einschalten des Geräts.
+gps_takeoffdistance_int=100                  # Zurückgelegte Strecke für Abflugerkennung
 
-alarm_minenable_bool=false                   # enable an alarm when crossing a minimum altitude
-alarm_min_int=100                            # airspace floor
-alarm_maxenable_bool=false                   # enable an alarm when crossing a maximum altitude
-alarm_max_int=2000                           # airspace ceiling
+alarm_minenable_bool=false                   # Min-Alarm aktivieren
+alarm_min_int=100
+alarm_maxenable_bool=false                   # Max-Alarm aktivieren
+alarm_max_int=2000                           # Für kontrollierten Luftraum
 
-flightsummary_enable_bool=true               # announce flight statistics during shutdown
-flightsummary_altitude_bool=true             # announces max altitude in statistics
-flightsummary_speed_bool=true                # announces max speed in statistics
-flightsummary_climbrate_bool=false           # announces max and min climb rate in statistics
-flightsummary_duration_bool=true             # announces flight duration in statistics
+flightsummary_enable_bool=true               # Flugstatistiken beim Herunterfahren ankündigen
+flightsummary_altitude_bool=true             # meldet die maximale Höhe in der Statistik
+flightsummary_speed_bool=true                # meldet die Höchstgeschwindigkeit in der Statistik
+flightsummary_climbrate_bool=false           # meldet die maximale Steigrate in der Statistik
+flightsummary_duration_bool=true             # meldet die Flugdauer in der Statistik
 
-led_userled_int=4                            # what information to display on the LED the rest of the time
+led_userled_int=4
 
-system_language_string=de
-system_timezoneminutes_int=120               # local time offset from UTC
-system_tapsensitivity_int=3                  # how easy it is to trigger the double tap
-system_autopowerofftime_int=30               # switch off after a certain period of inactivity
+system_language_string=de                    # Sprache für die Sprachausgaben
+system_timezoneminutes_int=120               # lokale Abweichung von UTC (h)
+system_tapsensitivity_int=3
+system_autopowerofftime_int=30               # nach eingestellter Zeit herunterfahren
 system_voicepackversion_string=2023-06-13
 
 vario_tones_vz_0 = -500
@@ -108,63 +107,63 @@ vario_tones_duty_7 = 45
 [profile2]
 enabled_bool=false
 
-identity_profilename_string=                 # annonced at startup (if defined)
-identity_pilotname_string=  e                # enter your name. In UltraBip, it will be recorded on the GNSS tracks (mandatory for FAI).
-identity_birthdate_string=                   # enter your date of birth (optional)
-identity_wingname_string=                    # your aircraft name, it will be recorded on the GNSS tracks, mandatory for FAI
-identity_compid_string=                      # your competitor number, mandatory for competitions
+identity_profilename_string=                 # wird beim Start bekannt gegeben (falls definiert)
+identity_pilotname_string=  e                # Geben Sie Ihren Namen und Vornamen ein, er wird in der GPS-Aufzeichnung abgespeichert. (Verpflichtend für die FAI)
+identity_birthdate_string=0001-01-20         # Geben Sie Ihr Geburtsdatum ein (optional)
+identity_wingname_string=BGD Magic           # Der Name des Luftsportgerätes wird in der GPS-Aufzeichnung gespeichert. (verpflichtend für die FAI)
+identity_compid_string=                      # Ihre Identifikationsnummer, verpflichtend für den Wettkampf.
 
-vario_liftstart_int=10                       # minimum lift value to start beeping
-vario_integrationtime_int=50                 # vario integration time
-vario_sinkalarm_bool=false                   # alarm when sinking
-vario_sinkstart_int=-350                     # sink alarm threshold
-vario_groundsilent_bool=true                 # enable vario after takeoff detection
-vario_liftysound_bool=false                  # indicate weak positive or negative lift
-vario_sweeptone_bool=true                    # sweep tone of beep tone (tuuuiit-tuuiit or tiiit-tiit)
+vario_liftstart_int=10                       # minimale Steigrate für Tonausgabe (bip)
+vario_integrationtime_int=50                 # Vario Integrationszeit
+vario_sinkalarm_bool=false                   # Vario Sinkalarm
+vario_sinkstart_int=-350                     # Auslösewert für Sinken
+vario_groundsilent_bool=true                 # aktiviert das sprechende Vario erst nach Abflug (automatische Abflugserkennung muss aktiviert sein)
+vario_liftysound_bool=false                  # zeigt sehr geringes Steigen an (+/-10cm/s)
+vario_sweeptone_bool=true                    # Das Variometer nutzt keine Konstant- sondern Sweeptöne (tuuuiit-tuuiit ou tiiit-tiit)
 
-bluetooth_enable_bool=true                   # enable connectivity with iOS/Android smarphones and tablets
-bluetooth_remoteenable_bool=false            # enable (keyboard) mode to switch pages in your flight computer app (Android/iOS)
+bluetooth_enable_bool=true                   # Verbindungsmodus für iOS/Android-Smartphone oder -Tablet aktivieren
+bluetooth_remoteenable_bool=false
 
-voicetap_enable_bool=true                    # announces elements below when double tapping on the device
-voicetap_speed_bool=true                     # announces speed when double tapping
-voicetap_altitude_bool=true                  # announces altitude when double tapping
-voicetap_heading_bool=false                  # announces heading (N-NW-W-SW-S-SE-E-NE) when double tapping
-voicetap_climbrate_bool=true                 # announces climb rate when double tapping
-voicetap_time_bool=false                     # announces the time when double tapping
-voicetap_duration_bool=false                 # announces flight duration when double tapping
+voicetap_enable_bool=true                    # Ansage der im folgenden aufgeführten Informationen bei zweimaligen Tippen auf das Gerät
+voicetap_speed_bool=true                     # sagt beim Doppeltippen auch die Geschwindigkeit an
+voicetap_altitude_bool=true                  # sagt bei Doppeltippen die Höhe an
+voicetap_heading_bool=false                  # sagt beim Doppeltippen den Kurs (N-NW-W-SW-S-SO-O-NO) an
+voicetap_climbrate_bool=true                 # sagt beim Doppeltippen auch den Aufstieg an
+voicetap_time_bool=false                     # sagt beim Doppeltippen die Zeit an
+voicetap_duration_bool=false                 # sagt beim Doppeltippen auch die Flugzeit an
 
-voiceauto_enable_bool=false                  # announces elements below when any trigger conditions is met
-voiceauto_speed_bool=true                    # announces speed when any trigger condition is met
-voiceauto_altitude_bool=true                 # announces altitude when any trigger condition is met
-voiceauto_heading_bool=false                 # announces heading (N-NW-W-SW-S-SE-E-NE) when any trigger condition is met
-voiceauto_climbrate_bool=false               # announces climb-rate when any trigger condition is met
-voiceauto_time_bool=false                    # announces clock/time when any trigger condition is met
-voiceauto_duration_bool=true                 # announces flight duration when any trigger condition is met
-voiceauto_altitudetrigger_int=300            # announces automatically with altitude variation
-voiceauto_distancetrigger_int=3000           # announces automatically with distance variation
-voiceauto_timetrigger_int=30                 # announces automatically over time
+voiceauto_enable_bool=false                  # Ansage sobald einer der hier aufgeführten Schwellwerte erreicht wird
+voiceauto_speed_bool=true                    # sagt die Geschwindigkeit bei automatischer Auslösung an
+voiceauto_altitude_bool=true                 # sagt die Höhe bei automatischer Auslösung an
+voiceauto_heading_bool=false                 # sagt den Kurs (N-NW-W-SW-S-SO-O-NO) an
+voiceauto_climbrate_bool=false               # sagt den Aufstieg bei automatischer Auslösung an
+voiceauto_time_bool=false                    # sagt die Zeit bei automatischer Auslösung an
+voiceauto_duration_bool=true                 # sagt die Flugzeit bei automatischer Auslösung an
+voiceauto_altitudetrigger_int=300            # Auslösung bei einer Veränderung der Höhe
+voiceauto_distancetrigger_int=3000           # Auslösung bei Veränderung der zurückgelegten Strecke
+voiceauto_timetrigger_int=30                 # regelmäßige Auslösung mit der Zeit
 
-gps_enable_bool=true                         # enable GPS tracking, required for voice and track recording
-gps_takeoffdetection_bool=true               # enable automatic takeoff detection. If OFF, recording starts immediately
-gps_takeoffdistance_int=100                  # distance to detect takeoff
+gps_enable_bool=true                         # GPS aktivieren (erforderlich für Sprachausgabe und Aufzeichnung)
+gps_takeoffdetection_bool=true               # erkennt automatisch den Start, andernfalls beginnt die Aufzeichnung beim Einschalten des Geräts.
+gps_takeoffdistance_int=100                  # Zurückgelegte Strecke für Abflugerkennung
 
-alarm_minenable_bool=false                   # enable an alarm when crossing a minimum altitude
-alarm_min_int=100                            # airspace floor
-alarm_maxenable_bool=false                   # enable an alarm when crossing a maximum altitude
-alarm_max_int=2000                           # airspace ceiling
+alarm_minenable_bool=false                   # Min-Alarm aktivieren
+alarm_min_int=100
+alarm_maxenable_bool=false                   # Max-Alarm aktivieren
+alarm_max_int=2000                           # Für kontrollierten Luftraum
 
-flightsummary_enable_bool=true               # announce flight statistics during shutdown
-flightsummary_altitude_bool=true             # announces max altitude in statistics
-flightsummary_speed_bool=true                # announces max speed in statistics
-flightsummary_climbrate_bool=false           # announces max and min climb rate in statistics
-flightsummary_duration_bool=true             # announces flight duration in statistics
+flightsummary_enable_bool=true               # Flugstatistiken beim Herunterfahren ankündigen
+flightsummary_altitude_bool=true             # meldet die maximale Höhe in der Statistik
+flightsummary_speed_bool=true                # meldet die Höchstgeschwindigkeit in der Statistik
+flightsummary_climbrate_bool=false           # meldet die maximale Steigrate in der Statistik
+flightsummary_duration_bool=true             # meldet die Flugdauer in der Statistik
 
-led_userled_int=4                            # what information to display on the LED the rest of the time
+led_userled_int=4
 
-system_language_string=de
-system_timezoneminutes_int=120               # local time offset from UTC
-system_tapsensitivity_int=3                  # how easy it is to trigger the double tap
-system_autopowerofftime_int=30               # switch off after a certain period of inactivity
+system_language_string=de                    # Sprache für die Sprachausgaben
+system_timezoneminutes_int=120               # lokale Abweichung von UTC (h)
+system_tapsensitivity_int=3
+system_autopowerofftime_int=30               # nach eingestellter Zeit herunterfahren
 system_voicepackversion_string=
 
 vario_tones_vz_0 = -500
@@ -203,63 +202,63 @@ vario_tones_duty_7 = 45
 [profile3]
 enabled_bool=false
 
-identity_profilename_string=                 # annonced at startup (if defined)
-identity_pilotname_string=  e                # enter your name. In UltraBip, it will be recorded on the GNSS tracks (mandatory for FAI).
-identity_birthdate_string=                   # enter your date of birth (optional)
-identity_wingname_string=                    # your aircraft name, it will be recorded on the GNSS tracks, mandatory for FAI
-identity_compid_string=                      # your competitor number, mandatory for competitions
+identity_profilename_string=                 # wird beim Start bekannt gegeben (falls definiert)
+identity_pilotname_string=  e                # Geben Sie Ihren Namen und Vornamen ein, er wird in der GPS-Aufzeichnung abgespeichert. (Verpflichtend für die FAI)
+identity_birthdate_string=0001-01-20         # Geben Sie Ihr Geburtsdatum ein (optional)
+identity_wingname_string=BGD Magic           # Der Name des Luftsportgerätes wird in der GPS-Aufzeichnung gespeichert. (verpflichtend für die FAI)
+identity_compid_string=                      # Ihre Identifikationsnummer, verpflichtend für den Wettkampf.
 
-vario_liftstart_int=10                       # minimum lift value to start beeping
-vario_integrationtime_int=50                 # vario integration time
-vario_sinkalarm_bool=false                   # alarm when sinking
-vario_sinkstart_int=-350                     # sink alarm threshold
-vario_groundsilent_bool=true                 # enable vario after takeoff detection
-vario_liftysound_bool=false                  # indicate weak positive or negative lift
-vario_sweeptone_bool=true                    # sweep tone of beep tone (tuuuiit-tuuiit or tiiit-tiit)
+vario_liftstart_int=10                       # minimale Steigrate für Tonausgabe (bip)
+vario_integrationtime_int=50                 # Vario Integrationszeit
+vario_sinkalarm_bool=false                   # Vario Sinkalarm
+vario_sinkstart_int=-350                     # Auslösewert für Sinken
+vario_groundsilent_bool=true                 # aktiviert das sprechende Vario erst nach Abflug (automatische Abflugserkennung muss aktiviert sein)
+vario_liftysound_bool=false                  # zeigt sehr geringes Steigen an (+/-10cm/s)
+vario_sweeptone_bool=true                    # Das Variometer nutzt keine Konstant- sondern Sweeptöne (tuuuiit-tuuiit ou tiiit-tiit)
 
-bluetooth_enable_bool=true                   # enable connectivity with iOS/Android smarphones and tablets
-bluetooth_remoteenable_bool=false            # enable (keyboard) mode to switch pages in your flight computer app (Android/iOS)
+bluetooth_enable_bool=true                   # Verbindungsmodus für iOS/Android-Smartphone oder -Tablet aktivieren
+bluetooth_remoteenable_bool=false
 
-voicetap_enable_bool=true                    # announces elements below when double tapping on the device
-voicetap_speed_bool=true                     # announces speed when double tapping
-voicetap_altitude_bool=true                  # announces altitude when double tapping
-voicetap_heading_bool=false                  # announces heading (N-NW-W-SW-S-SE-E-NE) when double tapping
-voicetap_climbrate_bool=true                 # announces climb rate when double tapping
-voicetap_time_bool=false                     # announces the time when double tapping
-voicetap_duration_bool=false                 # announces flight duration when double tapping
+voicetap_enable_bool=true                    # Ansage der im folgenden aufgeführten Informationen bei zweimaligen Tippen auf das Gerät
+voicetap_speed_bool=true                     # sagt beim Doppeltippen auch die Geschwindigkeit an
+voicetap_altitude_bool=true                  # sagt bei Doppeltippen die Höhe an
+voicetap_heading_bool=false                  # sagt beim Doppeltippen den Kurs (N-NW-W-SW-S-SO-O-NO) an
+voicetap_climbrate_bool=true                 # sagt beim Doppeltippen auch den Aufstieg an
+voicetap_time_bool=false                     # sagt beim Doppeltippen die Zeit an
+voicetap_duration_bool=false                 # sagt beim Doppeltippen auch die Flugzeit an
 
-voiceauto_enable_bool=false                  # announces elements below when any trigger conditions is met
-voiceauto_speed_bool=true                    # announces speed when any trigger condition is met
-voiceauto_altitude_bool=true                 # announces altitude when any trigger condition is met
-voiceauto_heading_bool=false                 # announces heading (N-NW-W-SW-S-SE-E-NE) when any trigger condition is met
-voiceauto_climbrate_bool=false               # announces climb-rate when any trigger condition is met
-voiceauto_time_bool=false                    # announces clock/time when any trigger condition is met
-voiceauto_duration_bool=true                 # announces flight duration when any trigger condition is met
-voiceauto_altitudetrigger_int=300            # announces automatically with altitude variation
-voiceauto_distancetrigger_int=3000           # announces automatically with distance variation
-voiceauto_timetrigger_int=30                 # announces automatically over time
+voiceauto_enable_bool=false                  # Ansage sobald einer der hier aufgeführten Schwellwerte erreicht wird
+voiceauto_speed_bool=true                    # sagt die Geschwindigkeit bei automatischer Auslösung an
+voiceauto_altitude_bool=true                 # sagt die Höhe bei automatischer Auslösung an
+voiceauto_heading_bool=false                 # sagt den Kurs (N-NW-W-SW-S-SO-O-NO) an
+voiceauto_climbrate_bool=false               # sagt den Aufstieg bei automatischer Auslösung an
+voiceauto_time_bool=false                    # sagt die Zeit bei automatischer Auslösung an
+voiceauto_duration_bool=true                 # sagt die Flugzeit bei automatischer Auslösung an
+voiceauto_altitudetrigger_int=300            # Auslösung bei einer Veränderung der Höhe
+voiceauto_distancetrigger_int=3000           # Auslösung bei Veränderung der zurückgelegten Strecke
+voiceauto_timetrigger_int=30                 # regelmäßige Auslösung mit der Zeit
 
-gps_enable_bool=true                         # enable GPS tracking, required for voice and track recording
-gps_takeoffdetection_bool=true               # enable automatic takeoff detection. If OFF, recording starts immediately
-gps_takeoffdistance_int=100                  # distance to detect takeoff
+gps_enable_bool=true                         # GPS aktivieren (erforderlich für Sprachausgabe und Aufzeichnung)
+gps_takeoffdetection_bool=true               # erkennt automatisch den Start, andernfalls beginnt die Aufzeichnung beim Einschalten des Geräts.
+gps_takeoffdistance_int=100                  # Zurückgelegte Strecke für Abflugerkennung
 
-alarm_minenable_bool=false                   # enable an alarm when crossing a minimum altitude
-alarm_min_int=100                            # airspace floor
-alarm_maxenable_bool=false                   # enable an alarm when crossing a maximum altitude
-alarm_max_int=2000                           # airspace ceiling
+alarm_minenable_bool=false                   # Min-Alarm aktivieren
+alarm_min_int=100
+alarm_maxenable_bool=false                   # Max-Alarm aktivieren
+alarm_max_int=2000                           # Für kontrollierten Luftraum
 
-flightsummary_enable_bool=true               # announce flight statistics during shutdown
-flightsummary_altitude_bool=true             # announces max altitude in statistics
-flightsummary_speed_bool=true                # announces max speed in statistics
-flightsummary_climbrate_bool=false           # announces max and min climb rate in statistics
-flightsummary_duration_bool=true             # announces flight duration in statistics
+flightsummary_enable_bool=true               # Flugstatistiken beim Herunterfahren ankündigen
+flightsummary_altitude_bool=true             # meldet die maximale Höhe in der Statistik
+flightsummary_speed_bool=true                # meldet die Höchstgeschwindigkeit in der Statistik
+flightsummary_climbrate_bool=false           # meldet die maximale Steigrate in der Statistik
+flightsummary_duration_bool=true             # meldet die Flugdauer in der Statistik
 
-led_userled_int=4                            # what information to display on the LED the rest of the time
+led_userled_int=4
 
-system_language_string=de
-system_timezoneminutes_int=120               # local time offset from UTC
-system_tapsensitivity_int=3                  # how easy it is to trigger the double tap
-system_autopowerofftime_int=30               # switch off after a certain period of inactivity
+system_language_string=de                    # Sprache für die Sprachausgaben
+system_timezoneminutes_int=120               # lokale Abweichung von UTC (h)
+system_tapsensitivity_int=3
+system_autopowerofftime_int=30               # nach eingestellter Zeit herunterfahren
 system_voicepackversion_string=
 
 vario_tones_vz_0 = -500
@@ -299,9 +298,5 @@ vario_tones_duty_7 = 45
 [global]
 system_firmwareversion_string=2023-06-30:1fe35e9c
 system_serialnumber_string=0080E12700A6DC8F
-global_timestamp=1686307715
+global_timestamp=1715786764
 configurator_version=2023-06-09
-system_hardwareversion_string=UltraBip_v1.1+1
-system_bootloaderversion_string=4
-system_volumehp_string=MED
-system_volumespk_string=MED
