@@ -1,32 +1,30 @@
-defaults nosave
+# 
 
+# diff
 
 # version
-# Betaflight / STM32F405 (S405) 4.5.1 Aug 25 2024 / 14:14:11 (77d01ba3b) MSP API: 1.46
-# config rev: e3a2cf9
+# Betaflight / STM32F405 (S405) 4.4.3 Dec 16 2023 / 15:37:07 (738127e7e) MSP API: 1.45
+
+# config: YES
 
 # start the command batch
 batch start
 
-# reset configuration to default settings
-defaults nosave
-
 board_name FURYF4OSD
 manufacturer_id DIAT
-mcu_id 003b002d3333471932393731
-signature 
 
 # name: SchuWiesSpeedyBe
 
 # feature
+feature -TELEMETRY
 feature -AIRMODE
 feature GPS
 feature OSD
 
 # serial
 serial 0 64 115200 57600 0 115200
-serial 2 131073 115200 57600 0 115200
-serial 5 2 115200 57600 0 115200
+serial 2 2 115200 57600 0 115200
+serial 5 131073 115200 57600 0 115200
 
 # beeper
 beeper -GYRO_CALIBRATED
@@ -81,8 +79,7 @@ set gyro_lpf1_dyn_min_hz = 0
 set gyro_lpf1_dyn_max_hz = 0
 set acc_lpf_hz = 10
 set acc_calibration = -16,15,41,1
-set align_mag = CW180
-set mag_align_yaw = 1800
+set mag_i2c_device = 1
 set baro_hardware = NONE
 set rc_smoothing_auto_factor = 45
 set rc_smoothing_auto_factor_throttle = 45
@@ -91,7 +88,6 @@ set failsafe_delay = 5
 set failsafe_off_delay = 100
 set failsafe_throttle = 1200
 set failsafe_procedure = GPS-RESCUE
-set align_board_yaw = 180
 set gps_sbas_mode = AUTO
 set gps_auto_baud = ON
 set gps_ublox_use_galileo = ON
@@ -121,6 +117,7 @@ set osd_core_temp_pos = 2177
 set osd_sys_vtx_voltage_pos = 2465
 set osd_sys_distance_pos = 2433
 set osd_sys_vtx_temp_pos = 2401
+set osd_displayport_device = MSP
 set osd_canvas_width = 50
 set osd_canvas_height = 18
 set vtx_band = 5
@@ -128,7 +125,9 @@ set vtx_channel = 3
 set vtx_power = 2
 set vtx_low_power_disarm = ON
 set vtx_freq = 5732
+set vcd_video_system = HD
 set gyro_1_sensor_align = DEFAULT
+set gyro_1_align_yaw = 1800
 set gyro_2_spibus = 1
 set rpm_filter_q = 1000
 set rpm_filter_fade_range_hz = 100
@@ -170,35 +169,9 @@ set simplified_feedforward_gain = 90
 set simplified_pitch_pi_gain = 115
 set simplified_dterm_filter_multiplier = 140
 
-profile 1
-
-profile 2
-
-profile 3
-
-# restore original profile selection
-profile 0
-
-rateprofile 0
-
-# rateprofile 0
-set roll_rc_rate = 2
-set pitch_rc_rate = 2
-set yaw_rc_rate = 2
-set roll_expo = 40
-set pitch_expo = 40
-set yaw_expo = 40
-set roll_srate = 80
-set pitch_srate = 80
-set yaw_srate = 60
-
-rateprofile 1
-
-rateprofile 2
-
 rateprofile 3
 
-# restore original rateprofile selection
-rateprofile 3
+# end the command batch
+batch end
 
-# save configuration
+# 
