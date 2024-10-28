@@ -1,9 +1,8 @@
 #=============================================================================
-# Konfigurationsdatei für leGPSBip, angelegt am: Wed May 15 2024 17:26:04 GMT+0200 (Mitteleuropäische Sommerzeit)
+# Konfigurationsdatei für das großartige UltraBip! Angelegt am: Thu Sep 12 2024 23:12:03 GMT+0200 (Mitteleuropäische Sommerzeit)
 #-----------------------------------------------------------------------------
-# Hallo, dies ist die Konfigurationsdatei für das großartige GPSBip
-# Sie können die Datei bearbeiten, aber seien sie vorsichtig. Wir empfehlen Ihnen,©
-# den Konfigurator zu nutzen, der Ihnen jederzeit online und offline zu Verfügung steht.
+# 
+# Bitte verwenden Sie den Konfigurator, der online oder offline verfügbar ist, um diese Datei zu ändern.
 # 
 # Guten Flug... und sichere Landung!
 # Mehr Informationen finden sie auf http://www.stodeus.com
@@ -12,291 +11,302 @@
 [profile1]
 enabled_bool=true
 
-identity_profilename_string=paragliding      # wird beim Start bekannt gegeben (falls definiert)
-identity_pilotname_string=Jürgen Schuft      # Geben Sie Ihren Namen und Vornamen ein, er wird in der GPS-Aufzeichnung abgespeichert. (Verpflichtend für die FAI)
-identity_birthdate_string=1972-01-20         # Geben Sie Ihr Geburtsdatum ein (optional)
-identity_wingname_string=BGD Magic           # Der Name des Luftsportgerätes wird in der GPS-Aufzeichnung gespeichert. (verpflichtend für die FAI)
-identity_compid_string=                      # Ihre Identifikationsnummer, verpflichtend für den Wettkampf.
+identity_profilename_string=paragliding
+identity_pilotname_string=Jürgen Schuft
+identity_birthdate_string=1972-01-20
+identity_wingname_string=BGD Magic
+identity_notes_string=
+identity_compid_string=
 
-vario_liftstart_int=10                       # minimale Steigrate für Tonausgabe (bip)
-vario_integrationtime_int=50                 # Vario Integrationszeit
-vario_sinkalarm_bool=false                   # Vario Sinkalarm
-vario_sinkstart_int=-350                     # Auslösewert für Sinken
-vario_groundsilent_bool=true                 # aktiviert das sprechende Vario erst nach Abflug (automatische Abflugserkennung muss aktiviert sein)
-vario_liftysound_bool=false                  # zeigt sehr geringes Steigen an (+/-10cm/s)
-vario_sweeptone_bool=true                    # Das Variometer nutzt keine Konstant- sondern Sweeptöne (tuuuiit-tuuiit ou tiiit-tiit)
+vario_preset_string=custom
+vario_liftstart_int=10
+vario_sinkalarm_bool=false
+vario_sinkstart_int=-350
+vario_liftysound_bool=false
+vario_integrationtime_int=50
+vario_groundsilent_bool=true
+vario_sweeptone_bool=true
 
-bluetooth_enable_bool=true                   # Verbindungsmodus für iOS/Android-Smartphone oder -Tablet aktivieren
+bluetooth_enable_bool=true
 bluetooth_remoteenable_bool=false
+bluetooth_compatibility_bool=false
 
-voicetap_enable_bool=true                    # Ansage der im folgenden aufgeführten Informationen bei zweimaligen Tippen auf das Gerät
-voicetap_speed_bool=true                     # sagt beim Doppeltippen auch die Geschwindigkeit an
-voicetap_altitude_bool=true                  # sagt bei Doppeltippen die Höhe an
-voicetap_heading_bool=false                  # sagt beim Doppeltippen den Kurs (N-NW-W-SW-S-SO-O-NO) an
-voicetap_climbrate_bool=true                 # sagt beim Doppeltippen auch den Aufstieg an
-voicetap_time_bool=false                     # sagt beim Doppeltippen die Zeit an
-voicetap_duration_bool=false                 # sagt beim Doppeltippen auch die Flugzeit an
+voicetap_enable_bool=true
+voicetap_speed_bool=true
+voicetap_altitude_bool=true
+voicetap_heading_bool=false
+voicetap_climbrate_bool=true
+voicetap_time_bool=false
+voicetap_duration_bool=false
+voicetap_enablewhensilent_bool=false
+voicetap_enablebeforetakeoff_bool=true
 
-voiceauto_enable_bool=false                  # Ansage sobald einer der hier aufgeführten Schwellwerte erreicht wird
-voiceauto_speed_bool=true                    # sagt die Geschwindigkeit bei automatischer Auslösung an
-voiceauto_altitude_bool=true                 # sagt die Höhe bei automatischer Auslösung an
-voiceauto_heading_bool=false                 # sagt den Kurs (N-NW-W-SW-S-SO-O-NO) an
-voiceauto_climbrate_bool=false               # sagt den Aufstieg bei automatischer Auslösung an
-voiceauto_time_bool=false                    # sagt die Zeit bei automatischer Auslösung an
-voiceauto_duration_bool=true                 # sagt die Flugzeit bei automatischer Auslösung an
-voiceauto_altitudetrigger_int=300            # Auslösung bei einer Veränderung der Höhe
-voiceauto_distancetrigger_int=3000           # Auslösung bei Veränderung der zurückgelegten Strecke
-voiceauto_timetrigger_int=30                 # regelmäßige Auslösung mit der Zeit
+voiceauto_enable_bool=false
+voiceauto_speed_bool=true
+voiceauto_altitude_bool=true
+voiceauto_heading_bool=false
+voiceauto_climbrate_bool=false
+voiceauto_time_bool=false
+voiceauto_duration_bool=true
+voiceauto_altitudetrigger_int=300
+voiceauto_distancetrigger_int=3000
+voiceauto_timetrigger_int=30
 
-gps_enable_bool=true                         # GPS aktivieren (erforderlich für Sprachausgabe und Aufzeichnung)
-gps_takeoffdetection_bool=true               # erkennt automatisch den Start, andernfalls beginnt die Aufzeichnung beim Einschalten des Geräts.
-gps_takeoffdistance_int=100                  # Zurückgelegte Strecke für Abflugerkennung
+gps_enable_bool=true
+gps_takeoffdetection_bool=true
 
-alarm_minenable_bool=false                   # Min-Alarm aktivieren
-alarm_min_int=100
-alarm_maxenable_bool=false                   # Max-Alarm aktivieren
-alarm_max_int=2000                           # Für kontrollierten Luftraum
+alarm_min2_int=0
+alarm_max2_int=0
 
-flightsummary_enable_bool=true               # Flugstatistiken beim Herunterfahren ankündigen
-flightsummary_altitude_bool=true             # meldet die maximale Höhe in der Statistik
-flightsummary_speed_bool=true                # meldet die Höchstgeschwindigkeit in der Statistik
-flightsummary_climbrate_bool=false           # meldet die maximale Steigrate in der Statistik
-flightsummary_duration_bool=true             # meldet die Flugdauer in der Statistik
+flightsummary_enable_bool=true
+flightsummary_altitude_bool=true
+flightsummary_speed_bool=true
+flightsummary_climbrate_bool=false
+flightsummary_duration_bool=true
 
 led_userled_int=4
 
-system_language_string=de                    # Sprache für die Sprachausgaben
-system_timezoneminutes_int=120               # lokale Abweichung von UTC (h)
+system_language_string=de
+system_timezoneauto_bool=true
+system_timeoffsetminutes_int=-720
 system_tapsensitivity_int=3
-system_autopowerofftime_int=30               # nach eingestellter Zeit herunterfahren
+system_autopowerofftime_int=30
 system_voicepackversion_string=2023-06-13
 
-vario_tones_vz_0 = -500
-vario_tones_freq_0 = 62
-vario_tones_duration_0 = 450
-vario_tones_duty_0 = 50
-vario_tones_vz_1 = -350
-vario_tones_freq_1 = 75
-vario_tones_duration_1 = 450
-vario_tones_duty_1 = 100
-vario_tones_vz_2 = -50
-vario_tones_freq_2 = 100
-vario_tones_duration_2 = 450
-vario_tones_duty_2 = 100
-vario_tones_vz_3 = 5
-vario_tones_freq_3 = 440
-vario_tones_duration_3 = 875
-vario_tones_duty_3 = 50
-vario_tones_vz_4 = 80
-vario_tones_freq_4 = 513
-vario_tones_duration_4 = 770
-vario_tones_duty_4 = 26
-vario_tones_vz_5 = 120
-vario_tones_freq_5 = 675
-vario_tones_duration_5 = 500
-vario_tones_duty_5 = 27
-vario_tones_vz_6 = 300
-vario_tones_freq_6 = 845
-vario_tones_duration_6 = 370
-vario_tones_duty_6 = 30
-vario_tones_vz_7 = 800
-vario_tones_freq_7 = 1000
-vario_tones_duration_7 = 230
-vario_tones_duty_7 = 45
+vario_tones_vz_0=-500
+vario_tones_freq_0=62
+vario_tones_duration_0=450
+vario_tones_duty_0=50
+vario_tones_vz_1=-350
+vario_tones_freq_1=75
+vario_tones_duration_1=450
+vario_tones_duty_1=100
+vario_tones_vz_2=-50
+vario_tones_freq_2=100
+vario_tones_duration_2=450
+vario_tones_duty_2=100
+vario_tones_vz_3=5
+vario_tones_freq_3=440
+vario_tones_duration_3=875
+vario_tones_duty_3=50
+vario_tones_vz_4=80
+vario_tones_freq_4=513
+vario_tones_duration_4=770
+vario_tones_duty_4=26
+vario_tones_vz_5=120
+vario_tones_freq_5=675
+vario_tones_duration_5=500
+vario_tones_duty_5=27
+vario_tones_vz_6=300
+vario_tones_freq_6=845
+vario_tones_duration_6=370
+vario_tones_duty_6=30
+vario_tones_vz_7=800
+vario_tones_freq_7=1000
+vario_tones_duration_7=230
+vario_tones_duty_7=45
 
 [profile2]
 enabled_bool=false
 
-identity_profilename_string=                 # wird beim Start bekannt gegeben (falls definiert)
-identity_pilotname_string=  e                # Geben Sie Ihren Namen und Vornamen ein, er wird in der GPS-Aufzeichnung abgespeichert. (Verpflichtend für die FAI)
-identity_birthdate_string=0001-01-20         # Geben Sie Ihr Geburtsdatum ein (optional)
-identity_wingname_string=BGD Magic           # Der Name des Luftsportgerätes wird in der GPS-Aufzeichnung gespeichert. (verpflichtend für die FAI)
-identity_compid_string=                      # Ihre Identifikationsnummer, verpflichtend für den Wettkampf.
+identity_profilename_string=
+identity_pilotname_string=  e
+identity_birthdate_string=0001-01-20
+identity_wingname_string=BGD Magic
+identity_notes_string=
+identity_compid_string=
 
-vario_liftstart_int=10                       # minimale Steigrate für Tonausgabe (bip)
-vario_integrationtime_int=50                 # Vario Integrationszeit
-vario_sinkalarm_bool=false                   # Vario Sinkalarm
-vario_sinkstart_int=-350                     # Auslösewert für Sinken
-vario_groundsilent_bool=true                 # aktiviert das sprechende Vario erst nach Abflug (automatische Abflugserkennung muss aktiviert sein)
-vario_liftysound_bool=false                  # zeigt sehr geringes Steigen an (+/-10cm/s)
-vario_sweeptone_bool=true                    # Das Variometer nutzt keine Konstant- sondern Sweeptöne (tuuuiit-tuuiit ou tiiit-tiit)
+vario_preset_string=custom
+vario_liftstart_int=10
+vario_sinkalarm_bool=false
+vario_sinkstart_int=-350
+vario_liftysound_bool=false
+vario_integrationtime_int=50
+vario_groundsilent_bool=true
+vario_sweeptone_bool=true
 
-bluetooth_enable_bool=true                   # Verbindungsmodus für iOS/Android-Smartphone oder -Tablet aktivieren
+bluetooth_enable_bool=true
 bluetooth_remoteenable_bool=false
+bluetooth_compatibility_bool=false
 
-voicetap_enable_bool=true                    # Ansage der im folgenden aufgeführten Informationen bei zweimaligen Tippen auf das Gerät
-voicetap_speed_bool=true                     # sagt beim Doppeltippen auch die Geschwindigkeit an
-voicetap_altitude_bool=true                  # sagt bei Doppeltippen die Höhe an
-voicetap_heading_bool=false                  # sagt beim Doppeltippen den Kurs (N-NW-W-SW-S-SO-O-NO) an
-voicetap_climbrate_bool=true                 # sagt beim Doppeltippen auch den Aufstieg an
-voicetap_time_bool=false                     # sagt beim Doppeltippen die Zeit an
-voicetap_duration_bool=false                 # sagt beim Doppeltippen auch die Flugzeit an
+voicetap_enable_bool=true
+voicetap_speed_bool=true
+voicetap_altitude_bool=true
+voicetap_heading_bool=false
+voicetap_climbrate_bool=true
+voicetap_time_bool=false
+voicetap_duration_bool=false
+voicetap_enablewhensilent_bool=false
+voicetap_enablebeforetakeoff_bool=true
 
-voiceauto_enable_bool=false                  # Ansage sobald einer der hier aufgeführten Schwellwerte erreicht wird
-voiceauto_speed_bool=true                    # sagt die Geschwindigkeit bei automatischer Auslösung an
-voiceauto_altitude_bool=true                 # sagt die Höhe bei automatischer Auslösung an
-voiceauto_heading_bool=false                 # sagt den Kurs (N-NW-W-SW-S-SO-O-NO) an
-voiceauto_climbrate_bool=false               # sagt den Aufstieg bei automatischer Auslösung an
-voiceauto_time_bool=false                    # sagt die Zeit bei automatischer Auslösung an
-voiceauto_duration_bool=true                 # sagt die Flugzeit bei automatischer Auslösung an
-voiceauto_altitudetrigger_int=300            # Auslösung bei einer Veränderung der Höhe
-voiceauto_distancetrigger_int=3000           # Auslösung bei Veränderung der zurückgelegten Strecke
-voiceauto_timetrigger_int=30                 # regelmäßige Auslösung mit der Zeit
+voiceauto_enable_bool=false
+voiceauto_speed_bool=true
+voiceauto_altitude_bool=true
+voiceauto_heading_bool=false
+voiceauto_climbrate_bool=false
+voiceauto_time_bool=false
+voiceauto_duration_bool=true
+voiceauto_altitudetrigger_int=300
+voiceauto_distancetrigger_int=3000
+voiceauto_timetrigger_int=30
 
-gps_enable_bool=true                         # GPS aktivieren (erforderlich für Sprachausgabe und Aufzeichnung)
-gps_takeoffdetection_bool=true               # erkennt automatisch den Start, andernfalls beginnt die Aufzeichnung beim Einschalten des Geräts.
-gps_takeoffdistance_int=100                  # Zurückgelegte Strecke für Abflugerkennung
+gps_enable_bool=true
+gps_takeoffdetection_bool=true
 
-alarm_minenable_bool=false                   # Min-Alarm aktivieren
-alarm_min_int=100
-alarm_maxenable_bool=false                   # Max-Alarm aktivieren
-alarm_max_int=2000                           # Für kontrollierten Luftraum
+alarm_min2_int=0
+alarm_max2_int=0
 
-flightsummary_enable_bool=true               # Flugstatistiken beim Herunterfahren ankündigen
-flightsummary_altitude_bool=true             # meldet die maximale Höhe in der Statistik
-flightsummary_speed_bool=true                # meldet die Höchstgeschwindigkeit in der Statistik
-flightsummary_climbrate_bool=false           # meldet die maximale Steigrate in der Statistik
-flightsummary_duration_bool=true             # meldet die Flugdauer in der Statistik
+flightsummary_enable_bool=true
+flightsummary_altitude_bool=true
+flightsummary_speed_bool=true
+flightsummary_climbrate_bool=false
+flightsummary_duration_bool=true
 
 led_userled_int=4
 
-system_language_string=de                    # Sprache für die Sprachausgaben
-system_timezoneminutes_int=120               # lokale Abweichung von UTC (h)
+system_language_string=de
+system_timezoneauto_bool=true
+system_timeoffsetminutes_int=-720
 system_tapsensitivity_int=3
-system_autopowerofftime_int=30               # nach eingestellter Zeit herunterfahren
+system_autopowerofftime_int=30
 system_voicepackversion_string=
 
-vario_tones_vz_0 = -500
-vario_tones_freq_0 = 62
-vario_tones_duration_0 = 450
-vario_tones_duty_0 = 50
-vario_tones_vz_1 = -350
-vario_tones_freq_1 = 75
-vario_tones_duration_1 = 450
-vario_tones_duty_1 = 100
-vario_tones_vz_2 = -50
-vario_tones_freq_2 = 100
-vario_tones_duration_2 = 450
-vario_tones_duty_2 = 100
-vario_tones_vz_3 = 5
-vario_tones_freq_3 = 440
-vario_tones_duration_3 = 875
-vario_tones_duty_3 = 50
-vario_tones_vz_4 = 80
-vario_tones_freq_4 = 513
-vario_tones_duration_4 = 770
-vario_tones_duty_4 = 26
-vario_tones_vz_5 = 120
-vario_tones_freq_5 = 675
-vario_tones_duration_5 = 500
-vario_tones_duty_5 = 27
-vario_tones_vz_6 = 300
-vario_tones_freq_6 = 845
-vario_tones_duration_6 = 370
-vario_tones_duty_6 = 30
-vario_tones_vz_7 = 800
-vario_tones_freq_7 = 1000
-vario_tones_duration_7 = 230
-vario_tones_duty_7 = 45
+vario_tones_vz_0=-500
+vario_tones_freq_0=62
+vario_tones_duration_0=450
+vario_tones_duty_0=50
+vario_tones_vz_1=-350
+vario_tones_freq_1=75
+vario_tones_duration_1=450
+vario_tones_duty_1=100
+vario_tones_vz_2=-50
+vario_tones_freq_2=100
+vario_tones_duration_2=450
+vario_tones_duty_2=100
+vario_tones_vz_3=5
+vario_tones_freq_3=440
+vario_tones_duration_3=875
+vario_tones_duty_3=50
+vario_tones_vz_4=80
+vario_tones_freq_4=513
+vario_tones_duration_4=770
+vario_tones_duty_4=26
+vario_tones_vz_5=120
+vario_tones_freq_5=675
+vario_tones_duration_5=500
+vario_tones_duty_5=27
+vario_tones_vz_6=300
+vario_tones_freq_6=845
+vario_tones_duration_6=370
+vario_tones_duty_6=30
+vario_tones_vz_7=800
+vario_tones_freq_7=1000
+vario_tones_duration_7=230
+vario_tones_duty_7=45
 
 [profile3]
 enabled_bool=false
 
-identity_profilename_string=                 # wird beim Start bekannt gegeben (falls definiert)
-identity_pilotname_string=  e                # Geben Sie Ihren Namen und Vornamen ein, er wird in der GPS-Aufzeichnung abgespeichert. (Verpflichtend für die FAI)
-identity_birthdate_string=0001-01-20         # Geben Sie Ihr Geburtsdatum ein (optional)
-identity_wingname_string=BGD Magic           # Der Name des Luftsportgerätes wird in der GPS-Aufzeichnung gespeichert. (verpflichtend für die FAI)
-identity_compid_string=                      # Ihre Identifikationsnummer, verpflichtend für den Wettkampf.
+identity_profilename_string=
+identity_pilotname_string=  e
+identity_birthdate_string=0001-01-20
+identity_wingname_string=BGD Magic
+identity_notes_string=
+identity_compid_string=
 
-vario_liftstart_int=10                       # minimale Steigrate für Tonausgabe (bip)
-vario_integrationtime_int=50                 # Vario Integrationszeit
-vario_sinkalarm_bool=false                   # Vario Sinkalarm
-vario_sinkstart_int=-350                     # Auslösewert für Sinken
-vario_groundsilent_bool=true                 # aktiviert das sprechende Vario erst nach Abflug (automatische Abflugserkennung muss aktiviert sein)
-vario_liftysound_bool=false                  # zeigt sehr geringes Steigen an (+/-10cm/s)
-vario_sweeptone_bool=true                    # Das Variometer nutzt keine Konstant- sondern Sweeptöne (tuuuiit-tuuiit ou tiiit-tiit)
+vario_preset_string=custom
+vario_liftstart_int=10
+vario_sinkalarm_bool=false
+vario_sinkstart_int=-350
+vario_liftysound_bool=false
+vario_integrationtime_int=50
+vario_groundsilent_bool=true
+vario_sweeptone_bool=true
 
-bluetooth_enable_bool=true                   # Verbindungsmodus für iOS/Android-Smartphone oder -Tablet aktivieren
+bluetooth_enable_bool=true
 bluetooth_remoteenable_bool=false
+bluetooth_compatibility_bool=false
 
-voicetap_enable_bool=true                    # Ansage der im folgenden aufgeführten Informationen bei zweimaligen Tippen auf das Gerät
-voicetap_speed_bool=true                     # sagt beim Doppeltippen auch die Geschwindigkeit an
-voicetap_altitude_bool=true                  # sagt bei Doppeltippen die Höhe an
-voicetap_heading_bool=false                  # sagt beim Doppeltippen den Kurs (N-NW-W-SW-S-SO-O-NO) an
-voicetap_climbrate_bool=true                 # sagt beim Doppeltippen auch den Aufstieg an
-voicetap_time_bool=false                     # sagt beim Doppeltippen die Zeit an
-voicetap_duration_bool=false                 # sagt beim Doppeltippen auch die Flugzeit an
+voicetap_enable_bool=true
+voicetap_speed_bool=true
+voicetap_altitude_bool=true
+voicetap_heading_bool=false
+voicetap_climbrate_bool=true
+voicetap_time_bool=false
+voicetap_duration_bool=false
+voicetap_enablewhensilent_bool=false
+voicetap_enablebeforetakeoff_bool=true
 
-voiceauto_enable_bool=false                  # Ansage sobald einer der hier aufgeführten Schwellwerte erreicht wird
-voiceauto_speed_bool=true                    # sagt die Geschwindigkeit bei automatischer Auslösung an
-voiceauto_altitude_bool=true                 # sagt die Höhe bei automatischer Auslösung an
-voiceauto_heading_bool=false                 # sagt den Kurs (N-NW-W-SW-S-SO-O-NO) an
-voiceauto_climbrate_bool=false               # sagt den Aufstieg bei automatischer Auslösung an
-voiceauto_time_bool=false                    # sagt die Zeit bei automatischer Auslösung an
-voiceauto_duration_bool=true                 # sagt die Flugzeit bei automatischer Auslösung an
-voiceauto_altitudetrigger_int=300            # Auslösung bei einer Veränderung der Höhe
-voiceauto_distancetrigger_int=3000           # Auslösung bei Veränderung der zurückgelegten Strecke
-voiceauto_timetrigger_int=30                 # regelmäßige Auslösung mit der Zeit
+voiceauto_enable_bool=false
+voiceauto_speed_bool=true
+voiceauto_altitude_bool=true
+voiceauto_heading_bool=false
+voiceauto_climbrate_bool=false
+voiceauto_time_bool=false
+voiceauto_duration_bool=true
+voiceauto_altitudetrigger_int=300
+voiceauto_distancetrigger_int=3000
+voiceauto_timetrigger_int=30
 
-gps_enable_bool=true                         # GPS aktivieren (erforderlich für Sprachausgabe und Aufzeichnung)
-gps_takeoffdetection_bool=true               # erkennt automatisch den Start, andernfalls beginnt die Aufzeichnung beim Einschalten des Geräts.
-gps_takeoffdistance_int=100                  # Zurückgelegte Strecke für Abflugerkennung
+gps_enable_bool=true
+gps_takeoffdetection_bool=true
 
-alarm_minenable_bool=false                   # Min-Alarm aktivieren
-alarm_min_int=100
-alarm_maxenable_bool=false                   # Max-Alarm aktivieren
-alarm_max_int=2000                           # Für kontrollierten Luftraum
+alarm_min2_int=0
+alarm_max2_int=0
 
-flightsummary_enable_bool=true               # Flugstatistiken beim Herunterfahren ankündigen
-flightsummary_altitude_bool=true             # meldet die maximale Höhe in der Statistik
-flightsummary_speed_bool=true                # meldet die Höchstgeschwindigkeit in der Statistik
-flightsummary_climbrate_bool=false           # meldet die maximale Steigrate in der Statistik
-flightsummary_duration_bool=true             # meldet die Flugdauer in der Statistik
+flightsummary_enable_bool=true
+flightsummary_altitude_bool=true
+flightsummary_speed_bool=true
+flightsummary_climbrate_bool=false
+flightsummary_duration_bool=true
 
 led_userled_int=4
 
-system_language_string=de                    # Sprache für die Sprachausgaben
-system_timezoneminutes_int=120               # lokale Abweichung von UTC (h)
+system_language_string=de
+system_timezoneauto_bool=true
+system_timeoffsetminutes_int=-720
 system_tapsensitivity_int=3
-system_autopowerofftime_int=30               # nach eingestellter Zeit herunterfahren
+system_autopowerofftime_int=30
 system_voicepackversion_string=
 
-vario_tones_vz_0 = -500
-vario_tones_freq_0 = 62
-vario_tones_duration_0 = 450
-vario_tones_duty_0 = 50
-vario_tones_vz_1 = -350
-vario_tones_freq_1 = 75
-vario_tones_duration_1 = 450
-vario_tones_duty_1 = 100
-vario_tones_vz_2 = -50
-vario_tones_freq_2 = 100
-vario_tones_duration_2 = 450
-vario_tones_duty_2 = 100
-vario_tones_vz_3 = 5
-vario_tones_freq_3 = 440
-vario_tones_duration_3 = 875
-vario_tones_duty_3 = 50
-vario_tones_vz_4 = 80
-vario_tones_freq_4 = 513
-vario_tones_duration_4 = 770
-vario_tones_duty_4 = 26
-vario_tones_vz_5 = 120
-vario_tones_freq_5 = 675
-vario_tones_duration_5 = 500
-vario_tones_duty_5 = 27
-vario_tones_vz_6 = 300
-vario_tones_freq_6 = 845
-vario_tones_duration_6 = 370
-vario_tones_duty_6 = 30
-vario_tones_vz_7 = 800
-vario_tones_freq_7 = 1000
-vario_tones_duration_7 = 230
-vario_tones_duty_7 = 45
+vario_tones_vz_0=-500
+vario_tones_freq_0=62
+vario_tones_duration_0=450
+vario_tones_duty_0=50
+vario_tones_vz_1=-350
+vario_tones_freq_1=75
+vario_tones_duration_1=450
+vario_tones_duty_1=100
+vario_tones_vz_2=-50
+vario_tones_freq_2=100
+vario_tones_duration_2=450
+vario_tones_duty_2=100
+vario_tones_vz_3=5
+vario_tones_freq_3=440
+vario_tones_duration_3=875
+vario_tones_duty_3=50
+vario_tones_vz_4=80
+vario_tones_freq_4=513
+vario_tones_duration_4=770
+vario_tones_duty_4=26
+vario_tones_vz_5=120
+vario_tones_freq_5=675
+vario_tones_duration_5=500
+vario_tones_duty_5=27
+vario_tones_vz_6=300
+vario_tones_freq_6=845
+vario_tones_duration_6=370
+vario_tones_duty_6=30
+vario_tones_vz_7=800
+vario_tones_freq_7=1000
+vario_tones_duration_7=230
+vario_tones_duty_7=45
 
 
 [global]
 system_firmwareversion_string=2023-06-30:1fe35e9c
 system_serialnumber_string=0080E12700A6DC8F
-global_timestamp=1715786764
-configurator_version=2023-06-09
+system_logs_int=0
+global_timestamp=1726175523
+configurator_version=2023-11-17
+global_timechanges_longstring=240331 120,241027  60,250330 120,251026  60,260329 120,261025  60,270328 120,271031  60,280326 120,281029  60,290325 120,291028  60,300331 120,301027  60,310330 120,311026  60,320328 120,321031  60,330327 120,331030  60,340326 120,341029  60,350325 120,351028  60,360330 120,361026  60,370329 120,371025  60,380328 120,381031  60,
