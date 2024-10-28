@@ -1,5 +1,5 @@
 #=============================================================================
-# Konfigurationsdatei für das großartige UltraBip! Angelegt am: Thu Sep 12 2024 23:12:03 GMT+0200 (Mitteleuropäische Sommerzeit)
+# Konfigurationsdatei für das großartige UltraBip! Angelegt am: Mon Oct 28 2024 13:19:33 GMT+0100 (Mitteleuropäische Normalzeit)
 #-----------------------------------------------------------------------------
 # 
 # Bitte verwenden Sie den Konfigurator, der online oder offline verfügbar ist, um diese Datei zu ändern.
@@ -18,7 +18,7 @@ identity_wingname_string=BGD Magic
 identity_notes_string=
 identity_compid_string=
 
-vario_preset_string=custom
+vario_preset_string=ultrabip
 vario_liftstart_int=10
 vario_sinkalarm_bool=false
 vario_sinkstart_int=-350
@@ -39,7 +39,7 @@ voicetap_climbrate_bool=true
 voicetap_time_bool=false
 voicetap_duration_bool=false
 voicetap_enablewhensilent_bool=false
-voicetap_enablebeforetakeoff_bool=true
+voicetap_enablebeforetakeoff_bool=false
 
 voiceauto_enable_bool=false
 voiceauto_speed_bool=true
@@ -73,7 +73,7 @@ system_tapsensitivity_int=3
 system_autopowerofftime_int=30
 system_voicepackversion_string=2023-06-13
 
-vario_tones_vz_0=-500
+vario_tones_vz_0=-600
 vario_tones_freq_0=62
 vario_tones_duration_0=450
 vario_tones_duty_0=50
@@ -307,6 +307,6 @@ vario_tones_duty_7=45
 system_firmwareversion_string=2023-06-30:1fe35e9c
 system_serialnumber_string=0080E12700A6DC8F
 system_logs_int=0
-global_timestamp=1726175523
+global_timestamp=1730117973
 configurator_version=2023-11-17
 global_timechanges_longstring=240331 120,241027  60,250330 120,251026  60,260329 120,261025  60,270328 120,271031  60,280326 120,281029  60,290325 120,291028  60,300331 120,301027  60,310330 120,311026  60,320328 120,321031  60,330327 120,331030  60,340326 120,341029  60,350325 120,351028  60,360330 120,361026  60,370329 120,371025  60,380328 120,381031  60,
