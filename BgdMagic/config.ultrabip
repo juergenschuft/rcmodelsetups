@@ -1,5 +1,5 @@
 #=============================================================================
-# Konfigurationsdatei für das großartige UltraBip! Angelegt am: Mon Oct 28 2024 13:19:33 GMT+0100 (Mitteleuropäische Normalzeit)
+# Konfigurationsdatei für das großartige UltraBip! Angelegt am: Mon Oct 28 2024 17:39:41 GMT+0100 (Mitteleuropäische Normalzeit)
 #-----------------------------------------------------------------------------
 # 
 # Bitte verwenden Sie den Konfigurator, der online oder offline verfügbar ist, um diese Datei zu ändern.
@@ -307,6 +307,6 @@ vario_tones_duty_7=45
 system_firmwareversion_string=2023-06-30:1fe35e9c
 system_serialnumber_string=0080E12700A6DC8F
 system_logs_int=0
-global_timestamp=1730117973
+global_timestamp=1730133581
 configurator_version=2023-11-17
 global_timechanges_longstring=240331 120,241027  60,250330 120,251026  60,260329 120,261025  60,270328 120,271031  60,280326 120,281029  60,290325 120,291028  60,300331 120,301027  60,310330 120,311026  60,320328 120,321031  60,330327 120,331030  60,340326 120,341029  60,350325 120,351028  60,360330 120,361026  60,370329 120,371025  60,380328 120,381031  60,
