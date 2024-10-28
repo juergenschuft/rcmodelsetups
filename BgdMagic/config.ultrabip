@@ -39,7 +39,7 @@ voicetap_climbrate_bool=true
 voicetap_time_bool=false
 voicetap_duration_bool=false
 voicetap_enablewhensilent_bool=false
-voicetap_enablebeforetakeoff_bool=true
+voicetap_enablebeforetakeoff_bool=false
 
 voiceauto_enable_bool=false
 voiceauto_speed_bool=true
