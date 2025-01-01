@@ -2,8 +2,8 @@ defaults nosave
 
 
 # version
-# Betaflight / STM32F405 (S405) 4.5.1 Aug 25 2024 / 14:14:11 (77d01ba3b) MSP API: 1.46
-# config rev: e3a2cf9
+# Betaflight / STM32F405 (S405) 4.5.1 Jan  1 2025 / 11:22:12 (77d01ba3b) MSP API: 1.46
+# config rev: 1b62baa
 
 # start the command batch
 batch start
@@ -80,10 +80,10 @@ set dyn_notch_max_hz = 800
 set gyro_lpf1_dyn_min_hz = 0
 set gyro_lpf1_dyn_max_hz = 0
 set acc_lpf_hz = 10
-set acc_calibration = 22,4,4,1
+set acc_calibration = -21,-2,5,1
 set align_mag = CW180
 set mag_align_yaw = 1800
-set baro_hardware = NONE
+set mag_calibration = 43,-362,-396
 set rc_smoothing_auto_factor = 45
 set rc_smoothing_auto_factor_throttle = 45
 set motor_pwm_protocol = DSHOT300
@@ -105,6 +105,7 @@ set gps_rescue_min_sats = 6
 set gps_rescue_allow_arming_without_fix = ON
 set pid_process_denom = 2
 set simplified_gyro_filter_multiplier = 120
+set osd_warn_bitmask = 458751
 set osd_vbat_pos = 2145
 set osd_rssi_pos = 3211
 set osd_link_quality_pos = 3147
@@ -119,10 +120,13 @@ set osd_home_dist_pos = 2274
 set osd_compass_bar_pos = 2581
 set osd_altitude_pos = 2561
 set osd_power_pos = 2113
+set osd_battery_usage_pos = 2081
+set osd_ready_mode_pos = 2389
 set osd_core_temp_pos = 2177
 set osd_sys_vtx_voltage_pos = 2465
 set osd_sys_distance_pos = 2433
 set osd_sys_vtx_temp_pos = 2401
+set osd_stat_bitmask = 6567724
 set osd_canvas_width = 50
 set osd_canvas_height = 18
 set vtx_band = 5
