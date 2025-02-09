@@ -93,6 +93,7 @@ set failsafe_off_delay = 100
 set failsafe_throttle = 1200
 set failsafe_procedure = GPS-RESCUE
 set align_board_yaw = 180
+set bat_capacity = 1100
 set gps_sbas_mode = EGNOS
 set gps_ublox_use_galileo = ON
 set gps_rescue_alt_mode = FIXED_ALT
